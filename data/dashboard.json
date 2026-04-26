@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-04-26T03:34:04.923Z",
-  "geradoEmBR": "26/04/2026, 00:34:04",
+  "geradoEm": "2026-04-26T03:34:06.552Z",
+  "geradoEmBR": "26/04/2026, 00:34:06",
   "geral": {
     "vendedor": "Geral",
     "total": 1,
@@ -64,6 +64,31 @@
     },
     "lais": {
       "vendedor": "Laís",
+      "total": 0,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {},
+      "porFaturamento": {},
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {}
+    },
+    "diogo": {
+      "vendedor": "Diogo",
       "total": 1,
       "novoLead": 1,
       "contatado": 0,
@@ -96,31 +121,6 @@
           "faturamento": 0
         }
       }
-    },
-    "diogo": {
-      "vendedor": "Diogo",
-      "total": 0,
-      "novoLead": 0,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {},
-      "porFaturamento": {},
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {}
     },
     "evento": {
       "vendedor": "Evento Presencial",
