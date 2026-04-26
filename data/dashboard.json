@@ -1,28 +1,18 @@
 {
-  "geradoEm": "2026-04-26T04:05:50.218Z",
-  "geradoEmBR": "26/04/2026, 01:05:50",
+  "geradoEm": "2026-04-26T04:05:51.951Z",
+  "geradoEmBR": "26/04/2026, 01:05:51",
   "debug": {
-    "totalItens": 2,
+    "totalItens": 1,
     "exemplos": [
       {
-        "listId": "901326990978",
+        "listId": "901326992549",
         "listObj": {
-          "id": "901326990978",
-          "name": "Tarefas do Comercial",
+          "id": "901326992549",
+          "name": "Agenda MD",
           "access": true
         },
-        "status": "follow-up",
-        "nome": "FUP Euzilene"
-      },
-      {
-        "listId": "901326990978",
-        "listObj": {
-          "id": "901326990978",
-          "name": "Tarefas do Comercial",
-          "access": true
-        },
-        "status": "ligação",
-        "nome": "Ligar pra Markylene"
+        "status": "nova reunião",
+        "nome": "123"
       }
     ]
   },
