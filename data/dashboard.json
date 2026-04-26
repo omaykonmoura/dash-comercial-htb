@@ -1,14 +1,14 @@
 {
-  "geradoEm": "2026-04-26T04:05:46.398Z",
-  "geradoEmBR": "26/04/2026, 01:05:46",
+  "geradoEm": "2026-04-26T04:05:48.525Z",
+  "geradoEmBR": "26/04/2026, 01:05:48",
   "debug": {
     "totalItens": 1,
     "exemplos": [
       {
-        "listId": "901326992672",
+        "listId": "901326992673",
         "listObj": {
-          "id": "901326992672",
-          "name": "Diogo",
+          "id": "901326992673",
+          "name": "Evento Presencial",
           "access": true
         },
         "status": "novo lead",
@@ -104,6 +104,31 @@
     },
     "diogo": {
       "vendedor": "Diogo",
+      "total": 0,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {},
+      "porFaturamento": {},
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {}
+    },
+    "evento": {
+      "vendedor": "Evento Presencial",
       "total": 1,
       "novoLead": 1,
       "contatado": 0,
@@ -136,31 +161,6 @@
           "faturamento": 0
         }
       }
-    },
-    "evento": {
-      "vendedor": "Evento Presencial",
-      "total": 0,
-      "novoLead": 0,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {},
-      "porFaturamento": {},
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {}
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
