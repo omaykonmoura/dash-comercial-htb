@@ -1,56 +1,133 @@
 {
-  "geradoEm": "2026-04-26T03:34:15.660Z",
-  "geradoEmBR": "26/04/2026, 00:34:15",
+  "geradoEm": "2026-04-26T04:05:43.141Z",
+  "geradoEmBR": "26/04/2026, 01:05:43",
+  "debug": {
+    "totalItens": 12,
+    "exemplos": [
+      {
+        "listId": "901326991205",
+        "listObj": {
+          "id": "901326991205",
+          "name": "Gleison",
+          "access": true
+        },
+        "status": "ativação de texto",
+        "nome": "Salão de Beleza & Spa"
+      },
+      {
+        "listId": "901326991205",
+        "listObj": {
+          "id": "901326991205",
+          "name": "Gleison",
+          "access": true
+        },
+        "status": "reunião agendada",
+        "nome": "Cardoso Glaucia"
+      },
+      {
+        "listId": "901326991205",
+        "listObj": {
+          "id": "901326991205",
+          "name": "Gleison",
+          "access": true
+        },
+        "status": "reunião agendada",
+        "nome": "Valéria Costa - Mega Hair"
+      }
+    ]
+  },
   "geral": {
     "vendedor": "Geral",
-    "total": 0,
+    "total": 12,
     "novoLead": 0,
-    "contatado": 0,
+    "contatado": 6,
     "emConducao": 0,
-    "agendado": 0,
-    "followUp": 0,
+    "agendado": 3,
+    "followUp": 1,
     "venda": 0,
-    "perdido": 0,
-    "desqualificado": 0,
-    "contatadosTotal": 0,
-    "faturamento": 0,
+    "perdido": 1,
+    "desqualificado": 1,
+    "contatadosTotal": 12,
+    "faturamento": 20000,
     "ligacoes": 0,
     "followUps": 0,
     "reunioesAgendadas": 0,
     "reunioesRealizadas": 0,
     "noShow": 0,
-    "porOrigem": {},
-    "porFaturamento": {},
-    "porAnuncio": {},
-    "porCampanha": {},
+    "porOrigem": {
+      "Não informado": 12
+    },
+    "porFaturamento": {
+      "Não informado": 12
+    },
+    "porAnuncio": {
+      "AD05.5 - PBE Carol": 3,
+      "AD05.3 - PBE 2026 não é para ...": 1,
+      "AD05.2 - PBE Envie para o amigo ...": 1,
+      "AD01.5 - PBE Carol — Cópia": 3,
+      "AD01.5 - PBE Laís — Cópia": 1,
+      "AD01.3 - PBE 2026 não é para ...": 2,
+      "AD8 - 13.04.26": 1
+    },
+    "porCampanha": {
+      "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 11,
+      "[FORMULARIO] [AUTO] [ABO] [WHATS] [CLIENTES]": 1
+    },
     "porProduto": {},
-    "porMes": {}
+    "porMes": {
+      "Não informado": {
+        "leads": 12,
+        "vendas": 0,
+        "faturamento": 0
+      }
+    }
   },
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 0,
+      "total": 12,
       "novoLead": 0,
-      "contatado": 0,
+      "contatado": 6,
       "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
+      "agendado": 3,
+      "followUp": 1,
       "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
+      "perdido": 1,
+      "desqualificado": 1,
+      "contatadosTotal": 12,
+      "faturamento": 20000,
       "ligacoes": 0,
       "followUps": 0,
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
-      "porOrigem": {},
-      "porFaturamento": {},
-      "porAnuncio": {},
-      "porCampanha": {},
+      "porOrigem": {
+        "Não informado": 12
+      },
+      "porFaturamento": {
+        "Não informado": 12
+      },
+      "porAnuncio": {
+        "AD05.5 - PBE Carol": 3,
+        "AD05.3 - PBE 2026 não é para ...": 1,
+        "AD05.2 - PBE Envie para o amigo ...": 1,
+        "AD01.5 - PBE Carol — Cópia": 3,
+        "AD01.5 - PBE Laís — Cópia": 1,
+        "AD01.3 - PBE 2026 não é para ...": 2,
+        "AD8 - 13.04.26": 1
+      },
+      "porCampanha": {
+        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 11,
+        "[FORMULARIO] [AUTO] [ABO] [WHATS] [CLIENTES]": 1
+      },
       "porProduto": {},
-      "porMes": {}
+      "porMes": {
+        "Não informado": {
+          "leads": 12,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
     },
     "lais": {
       "vendedor": "Laís",
@@ -162,7 +239,7 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "venda": 0,
-      "faturamento": 0,
+      "faturamento": 20000,
       "posicao": 1
     },
     {
@@ -188,5 +265,55 @@
       "posicao": 3
     }
   ],
-  "anuncios": []
+  "anuncios": [
+    {
+      "nome": "AD05.5 - PBE Carol",
+      "leads": 3,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD01.5 - PBE Carol — Cópia",
+      "leads": 3,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD01.3 - PBE 2026 não é para ...",
+      "leads": 2,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD05.3 - PBE 2026 não é para ...",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD05.2 - PBE Envie para o amigo ...",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD01.5 - PBE Laís — Cópia",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD8 - 13.04.26",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    }
+  ]
 }
