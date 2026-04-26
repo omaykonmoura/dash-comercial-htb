@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-04-26T03:34:08.561Z",
-  "geradoEmBR": "26/04/2026, 00:34:08",
+  "geradoEm": "2026-04-26T03:34:10.162Z",
+  "geradoEmBR": "26/04/2026, 00:34:10",
   "geral": {
     "vendedor": "Geral",
     "total": 1,
@@ -114,31 +114,6 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 0,
-      "novoLead": 0,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {},
-      "porFaturamento": {},
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {}
-    },
-    "leadsPool": {
-      "vendedor": "Pool de Leads",
       "total": 1,
       "novoLead": 1,
       "contatado": 0,
@@ -171,6 +146,31 @@
           "faturamento": 0
         }
       }
+    },
+    "leadsPool": {
+      "vendedor": "Pool de Leads",
+      "total": 0,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {},
+      "porFaturamento": {},
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {}
     }
   },
   "ranking": [
