@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-04-26T03:34:10.162Z",
-  "geradoEmBR": "26/04/2026, 00:34:10",
+  "geradoEm": "2026-04-26T03:34:12.278Z",
+  "geradoEmBR": "26/04/2026, 00:34:12",
   "geral": {
     "vendedor": "Geral",
-    "total": 1,
-    "novoLead": 1,
+    "total": 0,
+    "novoLead": 0,
     "contatado": 0,
     "emConducao": 0,
     "agendado": 0,
@@ -19,22 +19,12 @@
     "reunioesAgendadas": 0,
     "reunioesRealizadas": 0,
     "noShow": 0,
-    "porOrigem": {
-      "Não informado": 1
-    },
-    "porFaturamento": {
-      "Não informado": 1
-    },
+    "porOrigem": {},
+    "porFaturamento": {},
     "porAnuncio": {},
     "porCampanha": {},
     "porProduto": {},
-    "porMes": {
-      "Não informado": {
-        "leads": 1,
-        "vendas": 0,
-        "faturamento": 0
-      }
-    }
+    "porMes": {}
   },
   "vendedores": {
     "gleison": {
@@ -114,8 +104,8 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 1,
-      "novoLead": 1,
+      "total": 0,
+      "novoLead": 0,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -130,22 +120,12 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
-      "porOrigem": {
-        "Não informado": 1
-      },
-      "porFaturamento": {
-        "Não informado": 1
-      },
+      "porOrigem": {},
+      "porFaturamento": {},
       "porAnuncio": {},
       "porCampanha": {},
       "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 1,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
+      "porMes": {}
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
