@@ -1,82 +1,82 @@
 {
-  "geradoEm": "2026-04-26T04:13:37.325Z",
-  "geradoEmBR": "26/04/2026, 01:13:37",
+  "geradoEm": "2026-04-28T04:05:43.190Z",
+  "geradoEmBR": "28/04/2026, 01:05:43",
   "debug": {
-    "totalItens": 18,
+    "totalItens": 76,
     "exemplos": [
       {
-        "listId": "901326991205",
+        "listId": "901326992671",
         "listObj": {
-          "id": "901326991205",
-          "name": "Gleison",
+          "id": "901326992671",
+          "name": "Laís",
           "access": true
         },
-        "status": "ativação de texto",
-        "nome": "Salão de Beleza & Spa"
+        "status": "lead perdido",
+        "nome": "Clecia"
       },
       {
-        "listId": "901326991205",
+        "listId": "901326992671",
         "listObj": {
-          "id": "901326991205",
-          "name": "Gleison",
+          "id": "901326992671",
+          "name": "Laís",
           "access": true
         },
-        "status": "reunião agendada",
-        "nome": "Cardoso Glaucia"
+        "status": "lead perdido",
+        "nome": "Jéssica santos"
       },
       {
-        "listId": "901326991205",
+        "listId": "901326992672",
         "listObj": {
-          "id": "901326991205",
-          "name": "Gleison",
+          "id": "901326992672",
+          "name": "Diogo",
           "access": true
         },
-        "status": "reunião agendada",
-        "nome": "Valéria Costa - Mega Hair"
+        "status": "novo lead",
+        "nome": "Celso Luis da Silva rego"
       }
     ]
   },
   "geral": {
     "vendedor": "Geral",
-    "total": 15,
-    "novoLead": 3,
-    "contatado": 6,
+    "total": 34,
+    "novoLead": 32,
+    "contatado": 0,
     "emConducao": 0,
-    "agendado": 3,
-    "followUp": 1,
+    "agendado": 0,
+    "followUp": 0,
     "venda": 0,
-    "perdido": 1,
-    "desqualificado": 1,
-    "contatadosTotal": 12,
-    "faturamento": 20000,
+    "perdido": 2,
+    "desqualificado": 0,
+    "contatadosTotal": 2,
+    "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
     "reunioesAgendadas": 0,
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Não informado": 15
+      "Não informado": 34
     },
     "porFaturamento": {
-      "Não informado": 15
+      "Não informado": 34
     },
     "porAnuncio": {
-      "AD05.5 - PBE Carol": 3,
-      "AD05.3 - PBE 2026 não é para ...": 1,
-      "AD05.2 - PBE Envie para o amigo ...": 1,
-      "AD01.5 - PBE Carol — Cópia": 3,
-      "AD01.5 - PBE Laís — Cópia": 1,
+      "AD00.7 - Vídeo Antigo": 1,
+      "AD00.6 - Vídeo Vânia": 1,
+      "AD01.5 - PBE Carol — Cópia": 1,
       "AD01.3 - PBE 2026 não é para ...": 2,
-      "AD8 - 13.04.26": 1
+      "AD05.3 - PBE 2026 não é para ...": 1,
+      "AD02.5 - Criativo 2": 9
     },
     "porCampanha": {
-      "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 11,
-      "[FORMULARIO] [AUTO] [ABO] [WHATS] [CLIENTES]": 1
+      "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 2,
+      "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 4,
+      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 9
     },
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 15,
+        "leads": 34,
         "vendas": 0,
         "faturamento": 0
       }
@@ -85,157 +85,6 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 12,
-      "novoLead": 0,
-      "contatado": 6,
-      "emConducao": 0,
-      "agendado": 3,
-      "followUp": 1,
-      "venda": 0,
-      "perdido": 1,
-      "desqualificado": 1,
-      "contatadosTotal": 12,
-      "faturamento": 20000,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {
-        "Não informado": 12
-      },
-      "porFaturamento": {
-        "Não informado": 12
-      },
-      "porAnuncio": {
-        "AD05.5 - PBE Carol": 3,
-        "AD05.3 - PBE 2026 não é para ...": 1,
-        "AD05.2 - PBE Envie para o amigo ...": 1,
-        "AD01.5 - PBE Carol — Cópia": 3,
-        "AD01.5 - PBE Laís — Cópia": 1,
-        "AD01.3 - PBE 2026 não é para ...": 2,
-        "AD8 - 13.04.26": 1
-      },
-      "porCampanha": {
-        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 11,
-        "[FORMULARIO] [AUTO] [ABO] [WHATS] [CLIENTES]": 1
-      },
-      "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 12,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
-    },
-    "lais": {
-      "vendedor": "Laís",
-      "total": 1,
-      "novoLead": 1,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {
-        "Não informado": 1
-      },
-      "porFaturamento": {
-        "Não informado": 1
-      },
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 1,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
-    },
-    "diogo": {
-      "vendedor": "Diogo",
-      "total": 1,
-      "novoLead": 1,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {
-        "Não informado": 1
-      },
-      "porFaturamento": {
-        "Não informado": 1
-      },
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 1,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
-    },
-    "evento": {
-      "vendedor": "Evento Presencial",
-      "total": 1,
-      "novoLead": 1,
-      "contatado": 0,
-      "emConducao": 0,
-      "agendado": 0,
-      "followUp": 0,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 0,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {
-        "Não informado": 1
-      },
-      "porFaturamento": {
-        "Não informado": 1
-      },
-      "porAnuncio": {},
-      "porCampanha": {},
-      "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 1,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
-    },
-    "leadsPool": {
-      "vendedor": "Pool de Leads",
       "total": 0,
       "novoLead": 0,
       "contatado": 0,
@@ -258,6 +107,160 @@
       "porCampanha": {},
       "porProduto": {},
       "porMes": {}
+    },
+    "lais": {
+      "vendedor": "Laís",
+      "total": 2,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 2,
+      "desqualificado": 0,
+      "contatadosTotal": 2,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {
+        "Não informado": 2
+      },
+      "porFaturamento": {
+        "Não informado": 2
+      },
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {
+        "Não informado": {
+          "leads": 2,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    "diogo": {
+      "vendedor": "Diogo",
+      "total": 2,
+      "novoLead": 2,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {
+        "Não informado": 2
+      },
+      "porFaturamento": {
+        "Não informado": 2
+      },
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {
+        "Não informado": {
+          "leads": 2,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    "evento": {
+      "vendedor": "Evento Presencial",
+      "total": 25,
+      "novoLead": 25,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {
+        "Não informado": 25
+      },
+      "porFaturamento": {
+        "Não informado": 25
+      },
+      "porAnuncio": {
+        "AD05.3 - PBE 2026 não é para ...": 1,
+        "AD02.5 - Criativo 2": 9
+      },
+      "porCampanha": {
+        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 1,
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 9
+      },
+      "porProduto": {},
+      "porMes": {
+        "Não informado": {
+          "leads": 25,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    "leadsPool": {
+      "vendedor": "Pool de Leads",
+      "total": 5,
+      "novoLead": 5,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {
+        "Não informado": 5
+      },
+      "porFaturamento": {
+        "Não informado": 5
+      },
+      "porAnuncio": {
+        "AD00.7 - Vídeo Antigo": 1,
+        "AD00.6 - Vídeo Vânia": 1,
+        "AD01.5 - PBE Carol — Cópia": 1,
+        "AD01.3 - PBE 2026 não é para ...": 2
+      },
+      "porCampanha": {
+        "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 2,
+        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 3
+      },
+      "porProduto": {},
+      "porMes": {
+        "Não informado": {
+          "leads": 5,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
     }
   },
   "ranking": [
@@ -269,7 +272,7 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "venda": 0,
-      "faturamento": 20000,
+      "faturamento": 0,
       "posicao": 1
     },
     {
@@ -297,15 +300,8 @@
   ],
   "anuncios": [
     {
-      "nome": "AD05.5 - PBE Carol",
-      "leads": 3,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD01.5 - PBE Carol — Cópia",
-      "leads": 3,
+      "nome": "AD02.5 - Criativo 2",
+      "leads": 9,
       "vendas": 0,
       "faturamento": 0,
       "txConv": 0
@@ -318,28 +314,28 @@
       "txConv": 0
     },
     {
+      "nome": "AD00.7 - Vídeo Antigo",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD00.6 - Vídeo Vânia",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
+      "nome": "AD01.5 - PBE Carol — Cópia",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
       "nome": "AD05.3 - PBE 2026 não é para ...",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD05.2 - PBE Envie para o amigo ...",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD01.5 - PBE Laís — Cópia",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD8 - 13.04.26",
       "leads": 1,
       "vendas": 0,
       "faturamento": 0,
