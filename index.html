@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Comercial · High Ticket Beauty</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080810;--s1:#0f0f1a;--s2:#141422;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --accent:#6647f0;--gold:#ffc53d;--teal:#12a594;--red:#e5484d;--pink:#e93d82;--green:#30a46c;
+  --text:#e8e8f0;--muted:#5a5a72;--dim:#3a3a52;
+  --gleison:#6647f0;--lais:#e93d82;--diogo:#12a594;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;top:-30%;left:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(102,71,240,0.07) 0%,transparent 65%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;bottom:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(18,165,148,0.05) 0%,transparent 65%);pointer-events:none;z-index:0;}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:200;background:rgba(8,8,16,0.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);height:62px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;background:linear-gradient(120deg,#fff 0%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex-shrink:0;}
+.header-center{display:flex;gap:2px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:30px;padding:3px;}
+.tab-btn{padding:5px 18px;border-radius:24px;border:none;background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
+.tab-btn.active{background:var(--accent);color:#fff;}
+.tab-btn:hover:not(.active){color:var(--text);}
+.header-right{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.live-badge{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
+.dot-live{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 6px var(--teal);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+#countdown{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);background:rgba(255,197,61,0.08);padding:3px 10px;border-radius:20px;border:1px solid rgba(255,197,61,0.2);}
+.btn-token{background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.btn-token:hover{border-color:var(--border2);color:var(--text);}
+
+/* TOKEN SETUP */
+#token-setup{display:none;max-width:460px;margin:80px auto;background:var(--s1);border:1px solid var(--border2);border-radius:18px;padding:40px;text-align:center;}
+#token-setup.visible{display:block;}
+#token-setup h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;margin-bottom:10px;}
+#token-setup p{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:24px;}
+#token-input{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;margin-bottom:10px;outline:none;transition:border-color 0.2s;}
+#token-input:focus{border-color:var(--accent);}
+#save-token{width:100%;background:var(--accent);border:none;border-radius:8px;padding:12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:opacity 0.2s;}
+#save-token:hover{opacity:0.85;}
+
+/* LOADING */
+.state-banner{display:none;text-align:center;padding:100px 20px;color:var(--muted);font-size:14px;}
+.state-banner.visible{display:block;}
+.spinner{width:36px;height:36px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* MAIN */
+main{position:relative;z-index:1;padding:28px 28px 80px;max-width:1640px;margin:0 auto;}
+.view{display:none;}
+.view.active{display:block;animation:fadeIn 0.3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+/* MONTH FILTER */
+.month-filter{display:flex;align-items:center;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
+.month-filter label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-right:4px;}
+.month-btn{padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.month-btn:hover{border-color:var(--border2);color:var(--text);}
+.month-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+/* SECTION LABEL */
+.sl{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--muted);margin:32px 0 14px;display:flex;align-items:center;gap:10px;}
+.sl::after{content:'';flex:1;height:1px;background:var(--border);}
+.sl:first-child{margin-top:0;}
+
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;margin-bottom:4px;}
+.kpi-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative;overflow:hidden;transition:transform 0.2s,border-color 0.2s;}
+.kpi-card:hover{transform:translateY(-2px);border-color:var(--border2);}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--card-color,var(--accent));}
+.kpi-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-weight:500;}
+.kpi-val{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;color:var(--text);}
+.kpi-val.sm{font-size:24px;}
+.kpi-sub{font-size:11px;color:var(--muted);margin-top:6px;}
+
+/* VENDEDOR */
+.vendedor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;margin-bottom:4px;}
+.vc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;position:relative;overflow:hidden;}
+.vc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--vc-color);}
+.vc-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.vc-avatar{width:42px;height:42px;border-radius:50%;background:var(--vc-color);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;flex-shrink:0;}
+.vc-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--vc-color);}
+.vc-sub{font-size:11px;color:var(--muted);}
+.vc-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.vs{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px;}
+.vs-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px;}
+.vs-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:600;}
+.vc-fat{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:baseline;gap:8px;}
+.vc-fat-val{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;}
+.vc-fat-lbl{font-size:11px;color:var(--muted);}
+
+/* META */
+.meta-wrap{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:4px;}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+.mv{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.mv-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;margin-bottom:12px;}
+.mv-nums{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+.mv-atual{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:600;}
+.mv-total{font-size:12px;color:var(--muted);}
+.mv-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:6px;}
+.mv-fill{height:100%;border-radius:4px;transition:width 1s ease;}
+.mv-pct{font-size:11px;text-align:right;color:var(--muted);}
+
+/* RANKING */
+.ranking-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:4px;}
+.rc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.rc-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:18px;font-weight:500;}
+.rr{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);}
+.rr:last-child{border-bottom:none;}
+.rr-pos{font-family:'Bebas Neue',sans-serif;font-size:26px;width:30px;text-align:center;color:var(--muted);}
+.rr-pos.gold{color:var(--gold);}
+.rr-pos.silver{color:#9090a8;}
+.rr-pos.bronze{color:#bf9259;}
+.rr-info{flex:1;}
+.rr-name{font-weight:500;font-size:14px;margin-bottom:2px;}
+.rr-detail{font-size:11px;color:var(--muted);}
+.rr-scores{display:flex;gap:14px;}
+.rs{text-align:center;}
+.rs-val{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:600;}
+.rs-lbl{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;}
+
+/* CHARTS */
+.charts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;margin-bottom:4px;}
+.cc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.cc-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:18px;font-weight:500;}
+
+/* BARS */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.bar-lbl{font-size:11px;color:var(--text);width:140px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bar-track{flex:1;height:6px;background:var(--bg);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;transition:width 0.9s cubic-bezier(0.34,1.56,0.64,1);}
+.bar-cnt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);width:28px;text-align:right;}
+
+/* ANUNCIO */
+.anuncio-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;margin-bottom:5px;background:var(--bg);border:1px solid var(--border);transition:border-color 0.2s;}
+.anuncio-row:hover{border-color:var(--border2);}
+.anuncio-name{flex:1;font-size:11px;font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.anuncio-badge{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;flex-shrink:0;background:rgba(102,71,240,0.15);color:var(--accent);border:1px solid rgba(102,71,240,0.3);}
+.anuncio-badge.venda{background:rgba(48,164,108,0.15);color:var(--green);border-color:rgba(48,164,108,0.3);}
+
+.kommo-badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:600;background:rgba(255,197,61,0.1);color:var(--gold);border:1px solid rgba(255,197,61,0.2);margin-left:10px;}
+.empty{text-align:center;padding:28px;color:var(--muted);font-size:12px;}
+footer{text-align:center;padding:36px 28px;color:var(--dim);font-size:11px;border-top:1px solid var(--border);margin-top:48px;letter-spacing:0.5px;}
+
+@media(max-width:900px){
+  main{padding:14px;}header{padding:0 14px;}
+  .kpi-grid{grid-template-columns:repeat(2,1fr);}
+  .ranking-grid{grid-template-columns:1fr;}
+  .vc-stats{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">HTB · COMERCIAL</div>
+  <div class="header-center">
+    <button class="tab-btn active" onclick="switchView('vendas',this)">Vendas</button>
+    <button class="tab-btn" onclick="switchView('kommo',this)">Kommo CRM</button>
+  </div>
+  <div class="header-right">
+    <div class="live-badge"><div class="dot-live"></div><span id="last-update">–</span></div>
+    <div id="countdown">próx. em 5:00</div>
+    <button class="btn-token" onclick="clearToken()">⚙ Token</button>
+  </div>
+</header>
+
+<div id="token-setup">
+  <h2>🔑 API Key ClickUp</h2>
+  <p>Insira seu token de API pessoal do ClickUp.<br>
+  <strong>ClickUp → Configurações → Apps → API Token</strong></p>
+  <input type="password" id="token-input" placeholder="pk_xxxxxxxxxxxxxxxx..." />
+  <button id="save-token" onclick="saveToken()">Conectar</button>
+</div>
+
+<div class="state-banner" id="loading-state">
+  <div class="spinner"></div>
+  Buscando dados do ClickUp...
+</div>
+
+<main id="dashboard" style="display:none">
+
+  <!-- VIEW VENDAS -->
+  <div class="view active" id="view-vendas">
+    <div class="month-filter">
+      <label>Mês:</label>
+      <button class="month-btn active" onclick="setMonth('todos',this)">Todos</button>
+      <button class="month-btn" onclick="setMonth(0,this)">Jan</button>
+      <button class="month-btn" onclick="setMonth(1,this)">Fev</button>
+      <button class="month-btn" onclick="setMonth(2,this)">Mar</button>
+      <button class="month-btn" onclick="setMonth(3,this)">Abr</button>
+      <button class="month-btn" onclick="setMonth(4,this)">Mai</button>
+      <button class="month-btn" onclick="setMonth(5,this)">Jun</button>
+      <button class="month-btn" onclick="setMonth(6,this)">Jul</button>
+      <button class="month-btn" onclick="setMonth(7,this)">Ago</button>
+      <button class="month-btn" onclick="setMonth(8,this)">Set</button>
+      <button class="month-btn" onclick="setMonth(9,this)">Out</button>
+      <button class="month-btn" onclick="setMonth(10,this)">Nov</button>
+      <button class="month-btn" onclick="setMonth(11,this)">Dez</button>
+    </div>
+    <div class="sl">Visão Geral</div>
+    <div class="kpi-grid" id="kpi-vendas"></div>
+    <div class="sl">Performance por Vendedor</div>
+    <div class="vendedor-grid" id="vc-vendas"></div>
+    <div class="sl">Meta do Mês vs Faturamento</div>
+    <div class="meta-wrap"><div class="meta-grid" id="meta-vendas"></div></div>
+    <div class="sl">Ranking de Vendedores</div>
+    <div class="ranking-grid">
+      <div class="rc" id="rank-calls"></div>
+      <div class="rc" id="rank-fat"></div>
+    </div>
+    <div class="sl">Origem & Faixa de Faturamento</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📥 Leads por Origem</div><div id="chart-origem-v"></div></div>
+      <div class="cc"><div class="cc-title">🎯 Faixa de Faturamento · Mais Leads</div><div id="chart-fat-leads-v"></div></div>
+      <div class="cc"><div class="cc-title">💰 Faixa de Faturamento · Mais Vendas</div><div id="chart-fat-vendas-v"></div></div>
+    </div>
+    <div class="sl">Anúncios Meta Ads</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📢 Anúncio · Mais Leads</div><div id="ad-leads-v"></div></div>
+      <div class="cc"><div class="cc-title">🏆 Anúncio · Mais Vendas</div><div id="ad-vendas-v"></div></div>
+      <div class="cc"><div class="cc-title">📋 Produto Mais Vendido</div><div id="chart-produto-v"></div></div>
+    </div>
+  </div>
+
+  <!-- VIEW KOMMO -->
+  <div class="view" id="view-kommo">
+    <div class="sl">Kommo CRM <span class="kommo-badge">Base migrada</span></div>
+    <div class="kpi-grid" id="kpi-kommo"></div>
+    <div class="sl">Funil de Conversão</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📊 Funil · Mais Vendas (por Origem)</div><div id="chart-funil-vendas-k"></div></div>
+      <div class="cc"><div class="cc-title">📥 Funil · Mais Leads (por Origem)</div><div id="chart-funil-leads-k"></div></div>
+      <div class="cc"><div class="cc-title">✅ Leads Qualificados por Origem</div><div id="chart-qualif-k"></div></div>
+    </div>
+    <div class="sl">Origem & Faixa de Faturamento</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📥 Leads por Origem</div><div id="chart-origem-k"></div></div>
+      <div class="cc"><div class="cc-title">🎯 Faixa de Faturamento · Mais Leads</div><div id="chart-fat-leads-k"></div></div>
+      <div class="cc"><div class="cc-title">💰 Faixa de Faturamento · Mais Vendas</div><div id="chart-fat-vendas-k"></div></div>
+    </div>
+    <div class="sl">Anúncios Meta Ads</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📢 Anúncio · Mais Leads</div><div id="ad-leads-k"></div></div>
+      <div class="cc"><div class="cc-title">🏆 Anúncio · Mais Vendas</div><div id="ad-vendas-k"></div></div>
+    </div>
+  </div>
+
+</main>
+<footer>Dashboard Comercial · High Ticket Beauty · Dados ao vivo via ClickUp API · Atualização a cada 5 min</footer>
+
+<script>
+// ════════════════════════════════════════════════════════════
+// CONFIG — IDs reais validados via API em 28/04/2026
+// ════════════════════════════════════════════════════════════
+const LISTS = {
+  gleison: '901326991205',
+  lais:    '901326992671',
+  diogo:   '901326992672',
+  baseleads:'901326992677',
+  roy:     '901327014968',
+  evento:  '901326992673',
+  kommo:   '901327019006',
+  // Rotinas
+  followPre: '901326990978',
+  agendaMD:  '901326992549',
+  followPos: '901327008066',
+};
+
+// IDs dos custom fields (validados na task 86ah3jrw8)
+const CF = {
+  anuncio:     '7c97a010-6e93-4b98-822d-109326818d37',
+  campanha:    'ce5d2205-ebcd-4812-b9a6-f27e33da4e1d',
+  conjunto:    '14c4f005-6cce-4aee-b1d9-19a6af78fb8f',
+  mes:         'bd1b55f6-2301-4ed9-8895-232532e887a0',
+  origemLead:  'bf970757-a31b-4d0e-993a-2d888c5a6875',
+  produto:     'a0e6ba78-1667-45b0-b2f0-26bb676a3207',
+  perfil:      '6dd857ab-cc62-4dea-90ad-fa49c6e8b283',
+  desafio:     '00474068-869b-4b86-b288-aed9f58ece6d',
+  faturamento: '28ae25ca-b4dc-4102-94fb-cd6af7d02844',
+  valorVenda:  'a3915837-6601-4ee5-8616-80fd786428cb',
+  // Rotinas
+  dataLigacao: '57df1d80-3a02-4831-b089-2f418d98addb',
+  dataFUP:     '01a46f7c-a1e5-4a22-b791-bc70a8620be7',
+  // Agenda MD
+  dataAgend:   'b10f252e-18fa-44f1-bc10-e142577a59e5',
+  dataRealiz:  'eb15c903-19a7-4eec-9849-f3db5e00e2dd',
+  // Relacionamentos (vendedor → rotina)
+  relGleison:  'a6b92587-8880-4417-afb4-b017f2672a79',
+  relLais:     '62cd150f-1b66-4616-ac39-429825e05f68',
+  relDiogo:    '84c631d7-6be8-4d11-ba62-14c736f6fe6a',
+  relAgMD:     '9f5dbf53-1a65-4782-b3f3-4daf742fa5a9',
+};
+
+// ── Status exatos das listas de VENDAS ────────────────────
+// (Gleison, Laís, Diogo — confirmados nos dados reais)
+const S_VENDAS = {
+  // Calls agendadas: contamos pela Agenda MD (campo data preenchido)
+  // Mas nas listas de vendedor, o status de progresso são:
+  contato:   ['contato realizado', 'ativação de texto', 'em retorno'],
+  ligacao:   ['contato realizado', 'ativação de texto', 'em condução', 'follow-up', 'em retorno', 'em condução md', 'reunião agendada'],
+  agendado:  ['reunião agendada'],
+  realizado: ['venda realizada'], // reunião realizada vem da Agenda MD
+  noshow:    ['no-show', 'no show', 'no show-md'],
+  venda:     ['venda realizada'],
+  perdido:   ['lead perdido'],
+  desq:      ['lead desqualificado'],
+};
+
+// ── Status exatos da lista KOMMO CRM ─────────────────────
+const S_KOMMO = {
+  agendado:  ['reunião agendada', 'ligação agendada'],
+  realizado: ['assinatura contrato', 'proposta enviada', 'venda realizada'],
+  noshow:    ['no show-md'],
+  venda:     ['assinatura contrato', 'venda realizada'],
+  qualif:    ['reunião agendada', 'ligação agendada', 'em condução md',
+              'assinatura contrato', 'proposta enviada', 'venda realizada'],
+};
+
+const VENDEDORES = [
+  { key:'gleison', name:'Gleison', listId:LISTS.gleison, color:'#6647f0', initial:'G', relCF: CF.relGleison },
+  { key:'lais',    name:'Laís',    listId:LISTS.lais,    color:'#e93d82', initial:'L', relCF: CF.relLais    },
+  { key:'diogo',   name:'Diogo',   listId:LISTS.diogo,   color:'#12a594', initial:'D', relCF: CF.relDiogo   },
+];
+
+const METAS = { gleison:50000, lais:50000, diogo:50000 };
+
+// ════════════════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════════════════
+let allVendasTasks = []; // Gleison + Laís + Diogo + base + roy + evento
+let allRotinaTasks = []; // Follow-Up Pré-MD
+let allAgendaTasks = []; // Agenda MD
+let allKommoTasks  = [];
+let filteredVendas = [];
+let currentMonth   = 'todos';
+let timerSecs      = 300;
+let timerRef       = null;
+
+// ════════════════════════════════════════════════════════════
+// TOKEN
+// ════════════════════════════════════════════════════════════
+const getToken  = () => localStorage.getItem('htb_cu_token');
+const saveToken = () => {
+  const t = document.getElementById('token-input').value.trim();
+  if (!t) return alert('Insira um token válido.');
+  localStorage.setItem('htb_cu_token', t);
+  document.getElementById('token-setup').classList.remove('visible');
+  init();
+};
+const clearToken = () => { localStorage.removeItem('htb_cu_token'); location.reload(); };
+
+// ════════════════════════════════════════════════════════════
+// API — busca todas as páginas
+// ════════════════════════════════════════════════════════════
+async function fetchList(listId) {
+  const token = getToken();
+  let page = 0, all = [];
+  while (true) {
+    const res = await fetch(
+      `https://api.clickup.com/api/v2/list/${listId}/task?include_closed=true&page=${page}&subtasks=false&custom_fields=true`,
+      { headers: { Authorization: token } }
+    );
+    if (!res.ok) { console.warn(`Lista ${listId} HTTP ${res.status}`); break; }
+    const data = await res.json();
+    const tasks = (data.tasks || []).map(t => ({ ...t, _listId: listId }));
+    all = all.concat(tasks);
+    if (data.last_page || tasks.length < 100) break;
+    page++;
+  }
+  return all;
+}
+
+async function loadAll() {
+  const [g, l, d, base, roy, evt, kommo, rotina, agenda] = await Promise.all([
+    fetchList(LISTS.gleison),
+    fetchList(LISTS.lais),
+    fetchList(LISTS.diogo),
+    fetchList(LISTS.baseleads),
+    fetchList(LISTS.roy),
+    fetchList(LISTS.evento),
+    fetchList(LISTS.kommo),
+    fetchList(LISTS.followPre),
+    fetchList(LISTS.agendaMD),
+  ]);
+  allVendasTasks = [...g, ...l, ...d, ...base, ...roy, ...evt];
+  allRotinaTasks = rotina;
+  allAgendaTasks = agenda;
+  allKommoTasks  = kommo;
+}
+
+// ════════════════════════════════════════════════════════════
+// HELPERS
+// ════════════════════════════════════════════════════════════
+// Retorna o objeto do campo personalizado
+function getCFObj(task, cfId) {
+  return (task.custom_fields || []).find(f => f.id === cfId) || null;
+}
+
+// Retorna o valor bruto do campo
+function getCFVal(task, cfId) {
+  const f = getCFObj(task, cfId);
+  if (!f || f.value === null || f.value === undefined || f.value === '') return null;
+  return f.value;
+}
+
+// ✅ CRÍTICO: dropdown value é um INTEGER (índice do options[])
+// A API retorna o value como número = orderindex
+function getDropdown(task, cfId) {
+  const f = getCFObj(task, cfId);
+  if (!f) return null;
+  const opts = f.type_config?.options;
+  if (!opts || opts.length === 0) return f.value != null ? String(f.value) : null;
+  const val = f.value;
+  if (val === null || val === undefined) return null;
+  // val é o orderindex (número inteiro)
+  if (typeof val === 'number') {
+    const opt = opts.find(o => o.orderindex === val);
+    return opt?.name || null;
+  }
+  // fallback: busca por id ou orderindex como string
+  const opt = opts.find(o => o.id === val || String(o.orderindex) === String(val));
+  return opt?.name || null;
+}
+
+function getText(task, cfId) {
+  return getCFVal(task, cfId) || null;
+}
+
+function getNum(task, cfId) {
+  const v = getCFVal(task, cfId);
+  return v ? (parseFloat(v) || 0) : 0;
+}
+
+function hasDate(task, cfId) {
+  const v = getCFVal(task, cfId);
+  return v !== null && v !== 0 && v !== '0' && v !== '';
+}
+
+function hasRelation(task, cfId) {
+  const v = getCFVal(task, cfId);
+  return Array.isArray(v) ? v.length > 0 : !!v;
+}
+
+function sMatch(status, list) {
+  if (!status) return false;
+  const s = status.toLowerCase();
+  return list.some(l => s === l || s.includes(l));
+}
+
+function fmtBRL(n) {
+  return n.toLocaleString('pt-BR', { style:'currency', currency:'BRL', maximumFractionDigits:0 });
+}
+
+function countBy(arr, fn) {
+  const m = {};
+  arr.forEach(t => { const k = fn(t); if (k) m[k] = (m[k] || 0) + 1; });
+  return m;
+}
+
+function topN(obj, n = 8) {
+  return Object.entries(obj).sort((a, b) => b[1] - a[1]).slice(0, n);
+}
+
+// ════════════════════════════════════════════════════════════
+// FILTER POR MÊS
+// ════════════════════════════════════════════════════════════
+function applyFilter() {
+  if (currentMonth === 'todos') {
+    filteredVendas = allVendasTasks;
+  } else {
+    filteredVendas = allVendasTasks.filter(t => {
+      const val = getCFVal(t, CF.mes);
+      return val === currentMonth || String(val) === String(currentMonth);
+    });
+  }
+  renderVendas();
+}
+
+function setMonth(m, btn) {
+  currentMonth = m;
+  document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilter();
+}
+
+// ════════════════════════════════════════════════════════════
+// NAVIGATION
+// ════════════════════════════════════════════════════════════
+function switchView(id, btn) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('view-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ════════════════════════════════════════════════════════════
+// RENDER HELPERS
+// ════════════════════════════════════════════════════════════
+function renderBars(id, entries, color = '#6647f0') {
+  const el = document.getElementById(id);
+  if (!entries.length) { el.innerHTML = '<div class="empty">Sem dados suficientes</div>'; return; }
+  const max = entries[0][1];
+  el.innerHTML = entries.map(([lbl, cnt]) => `
+    <div class="bar-row">
+      <div class="bar-lbl" title="${lbl}">${lbl}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(cnt/max)*100}%;background:${color}"></div></div>
+      <div class="bar-cnt">${cnt}</div>
+    </div>`).join('');
+}
+
+function renderAnuncio(id, entries, isVenda = false) {
+  const el = document.getElementById(id);
+  if (!entries.length) { el.innerHTML = '<div class="empty">Sem dados de anúncio</div>'; return; }
+  el.innerHTML = entries.map(([name, cnt]) => `
+    <div class="anuncio-row">
+      <div class="anuncio-name">${name || '—'}</div>
+      <div class="anuncio-badge ${isVenda ? 'venda' : ''}">${cnt} ${isVenda ? 'venda' : 'lead'}${cnt !== 1 ? 's' : ''}</div>
+    </div>`).join('');
+}
+
+function renderRanking(id, title, rows) {
+  const medals = ['gold', 'silver', 'bronze'];
+  const icons  = ['🥇', '🥈', '🥉'];
+  document.getElementById(id).innerHTML = `
+    <div class="rc-title">${title}</div>
+    ${rows.map((r, i) => `
+      <div class="rr">
+        <div class="rr-pos ${medals[i] || ''}">${icons[i] || i + 1}</div>
+        <div class="rr-info">
+          <div class="rr-name" style="color:${r.color}">${r.name}</div>
+          <div class="rr-detail">${r.detail}</div>
+        </div>
+        <div class="rr-scores">${r.scores.map(s => `
+          <div class="rs">
+            <div class="rs-val" style="color:${s.color}">${s.val}</div>
+            <div class="rs-lbl">${s.lbl}</div>
+          </div>`).join('')}
+        </div>
+      </div>`).join('')}`;
+}
+
+// ════════════════════════════════════════════════════════════
+// RENDER VENDAS
+// ════════════════════════════════════════════════════════════
+function renderVendas() {
+  const tasks = filteredVendas;
+
+  // Métricas de atividade das Rotinas (baseadas em campos de data)
+  const vendasListIds = [LISTS.gleison, LISTS.lais, LISTS.diogo];
+  
+  // Ligações: tarefas em Follow-Up Pré-MD com Data da Ligação preenchida
+  const totalLigacoes = allRotinaTasks.filter(t => hasDate(t, CF.dataLigacao)).length;
+  // Agendadas: tarefas na Agenda MD com Data do Agendamento preenchida
+  const totalAgendados = allAgendaTasks.filter(t => hasDate(t, CF.dataAgend)).length;
+  // Realizadas: Agenda MD com Data Realizada preenchida
+  const totalRealizados = allAgendaTasks.filter(t => hasDate(t, CF.dataRealiz)).length;
+  // No-show: Agenda MD com status no-show
+  const totalNoshow = allAgendaTasks.filter(t => sMatch(t.status?.status, S_VENDAS.noshow)).length;
+
+  // Leads das listas de vendedores (exclui pool/roy/evento dos KPIs de atividade)
+  const leadsVendedor = tasks.filter(t => vendasListIds.includes(t._listId));
+  const totalLeads    = tasks.length;
+  const totalVendas   = tasks.filter(t => sMatch(t.status?.status, S_VENDAS.venda)).length;
+  const totalContatos = tasks.filter(t => sMatch(t.status?.status, [...S_VENDAS.contato, ...S_VENDAS.ligacao, ...S_VENDAS.agendado, ...S_VENDAS.realizado])).length;
+  const totalFat      = tasks.reduce((s, t) => s + getNum(t, CF.valorVenda), 0);
+  const leadsPool     = tasks.filter(t => t._listId === LISTS.baseleads).length;
+
+  // KPIs
+  document.getElementById('kpi-vendas').innerHTML = [
+    { lbl:'Total de Leads',      val:totalLeads,             sub:`${leadsPool} na base aguardando`, color:'var(--accent)' },
+    { lbl:'Contatos Feitos',     val:totalContatos,          sub:`${totalLeads ? ((totalContatos/totalLeads)*100).toFixed(0) : 0}% dos leads`, color:'var(--pink)' },
+    { lbl:'Ligações Feitas',     val:totalLigacoes,          sub:'Data de ligação registrada', color:'var(--gold)' },
+    { lbl:'Calls Agendadas',     val:totalAgendados,         sub:'Agenda MD preenchida', color:'var(--gold)' },
+    { lbl:'Calls Realizadas',    val:totalRealizados,        sub:'Reuniões com data realizada', color:'var(--teal)' },
+    { lbl:'No-Show',             val:totalNoshow,            sub:'Não compareceram', color:'var(--red)' },
+    { lbl:'Vendas',              val:totalVendas,            sub:`${totalLeads ? ((totalVendas/totalLeads)*100).toFixed(1) : 0}% conversão`, color:'var(--green)' },
+    { lbl:'Faturamento',         val:fmtBRL(totalFat),       sub:'Total de vendas', color:'var(--green)', sm:true },
+  ].map(k => `
+    <div class="kpi-card" style="--card-color:${k.color}">
+      <div class="kpi-lbl">${k.lbl}</div>
+      <div class="kpi-val ${k.sm ? 'sm' : ''}">${k.val}</div>
+      <div class="kpi-sub">${k.sub}</div>
+    </div>`).join('');
+
+  // Cards por Vendedor
+  document.getElementById('vc-vendas').innerHTML = VENDEDORES.map(v => {
+    const vt  = tasks.filter(t => t._listId === v.listId);
+    const vn  = vt.length;
+    const vv  = vt.filter(t => sMatch(t.status?.status, S_VENDAS.venda)).length;
+    const vc  = vt.filter(t => sMatch(t.status?.status, [...S_VENDAS.contato, ...S_VENDAS.ligacao, ...S_VENDAS.agendado])).length;
+    const vf  = vt.reduce((s, t) => s + getNum(t, CF.valorVenda), 0);
+    // Atividades deste vendedor nas Rotinas
+    const vLig  = allRotinaTasks.filter(t => hasDate(t, CF.dataLigacao) && hasRelation(t, v.relCF)).length;
+    const vAgend= allAgendaTasks.filter(t => hasDate(t, CF.dataAgend) && hasRelation(t, v.relCF)).length;
+    const vReal = allAgendaTasks.filter(t => hasDate(t, CF.dataRealiz) && hasRelation(t, v.relCF)).length;
+    const vNS   = allAgendaTasks.filter(t => sMatch(t.status?.status, S_VENDAS.noshow) && hasRelation(t, v.relCF)).length;
+
+    return `
+    <div class="vc" style="--vc-color:${v.color}">
+      <div class="vc-head">
+        <div class="vc-avatar">${v.initial}</div>
+        <div>
+          <div class="vc-name">${v.name}</div>
+          <div class="vc-sub">${vn} leads · ${vn ? ((vv/vn)*100).toFixed(1) : 0}% conversão</div>
+        </div>
+      </div>
+      <div class="vc-stats">
+        <div class="vs"><div class="vs-lbl">Contatos</div><div class="vs-val" style="color:${v.color}">${vc}</div></div>
+        <div class="vs"><div class="vs-lbl">Ligações</div><div class="vs-val" style="color:var(--gold)">${vLig}</div></div>
+        <div class="vs"><div class="vs-lbl">Agendadas</div><div class="vs-val" style="color:var(--gold)">${vAgend}</div></div>
+        <div class="vs"><div class="vs-lbl">Realizadas</div><div class="vs-val" style="color:var(--teal)">${vReal}</div></div>
+        <div class="vs"><div class="vs-lbl">No-Show</div><div class="vs-val" style="color:var(--red)">${vNS}</div></div>
+        <div class="vs"><div class="vs-lbl">Vendas</div><div class="vs-val" style="color:var(--green)">${vv}</div></div>
+      </div>
+      <div class="vc-fat">
+        <div class="vc-fat-val" style="color:${v.color}">${fmtBRL(vf)}</div>
+        <div class="vc-fat-lbl">faturado</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Meta
+  document.getElementById('meta-vendas').innerHTML = VENDEDORES.map(v => {
+    const vf   = tasks.filter(t => t._listId === v.listId).reduce((s, t) => s + getNum(t, CF.valorVenda), 0);
+    const meta = METAS[v.key] || 50000;
+    const pct  = Math.min((vf / meta) * 100, 100);
+    const cor  = pct >= 100 ? 'var(--green)' : pct >= 70 ? 'var(--gold)' : 'var(--red)';
+    return `
+    <div class="mv">
+      <div class="mv-name" style="color:${v.color}">${v.name}</div>
+      <div class="mv-nums"><div class="mv-atual">${fmtBRL(vf)}</div><div class="mv-total">meta: ${fmtBRL(meta)}</div></div>
+      <div class="mv-bar"><div class="mv-fill" style="width:${pct}%;background:${cor}"></div></div>
+      <div class="mv-pct" style="color:${cor}">${pct.toFixed(1)}% da meta</div>
+    </div>`;
+  }).join('');
+
+  // Ranking calls (por agendamentos via Agenda MD)
+  const callsData = VENDEDORES.map(v => ({
+    name: v.name, color: v.color,
+    detail: 'calls agendadas · realizadas · no-show',
+    agend: allAgendaTasks.filter(t => hasDate(t, CF.dataAgend) && hasRelation(t, v.relCF)).length,
+    realiz: allAgendaTasks.filter(t => hasDate(t, CF.dataRealiz) && hasRelation(t, v.relCF)).length,
+    noshow: allAgendaTasks.filter(t => sMatch(t.status?.status, S_VENDAS.noshow) && hasRelation(t, v.relCF)).length,
+  })).sort((a, b) => b.agend - a.agend).map(d => ({
+    ...d,
+    scores: [
+      { val:d.agend,  lbl:'Agend.',  color:'var(--gold)' },
+      { val:d.realiz, lbl:'Realiz.', color:'var(--teal)' },
+      { val:d.noshow, lbl:'No-show', color:'var(--red)'  },
+    ]
+  }));
+  renderRanking('rank-calls', '🏆 Ranking · Calls', callsData);
+
+  // Ranking faturamento
+  const fatData = VENDEDORES.map(v => {
+    const vt = tasks.filter(t => t._listId === v.listId);
+    const vf = vt.reduce((s, t) => s + getNum(t, CF.valorVenda), 0);
+    const vv = vt.filter(t => sMatch(t.status?.status, S_VENDAS.venda)).length;
+    return { name:v.name, color:v.color, fat:vf, vendas:vv, detail:`${vv} vendas realizadas` };
+  }).sort((a, b) => b.fat - a.fat).map(d => ({
+    ...d,
+    scores: [{ val:fmtBRL(d.fat), lbl:'Faturado', color:'var(--green)' }]
+  }));
+  renderRanking('rank-fat', '💰 Ranking · Faturamento', fatData);
+
+  // Origem (usa getDropdown — valor numérico = orderindex)
+  renderBars('chart-origem-v', topN(countBy(tasks, t => getDropdown(t, CF.origemLead))), '#6647f0');
+
+  // Faixa faturamento
+  renderBars('chart-fat-leads-v', topN(countBy(tasks, t => getDropdown(t, CF.faturamento))), '#ffc53d');
+  const vendasTasks = tasks.filter(t => sMatch(t.status?.status, S_VENDAS.venda));
+  renderBars('chart-fat-vendas-v', topN(countBy(vendasTasks, t => getDropdown(t, CF.faturamento))), '#30a46c');
+
+  // Anúncios (campo texto — usa getText)
+  renderAnuncio('ad-leads-v', topN(countBy(tasks, t => getText(t, CF.anuncio))));
+  renderAnuncio('ad-vendas-v', topN(countBy(vendasTasks, t => getText(t, CF.anuncio))), true);
+
+  // Produto
+  renderBars('chart-produto-v', topN(countBy(vendasTasks, t => getDropdown(t, CF.produto))), '#12a594');
+}
+
+// ════════════════════════════════════════════════════════════
+// RENDER KOMMO
+// ════════════════════════════════════════════════════════════
+function renderKommo() {
+  const tasks = allKommoTasks;
+
+  const total    = tasks.length;
+  const agendados= tasks.filter(t => sMatch(t.status?.status, S_KOMMO.agendado)).length;
+  const realiz   = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.realizado)).length;
+  const noshow   = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.noshow)).length;
+  const vendas   = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.venda)).length;
+  const qualif   = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.qualif)).length;
+  const fat      = tasks.reduce((s, t) => s + getNum(t, CF.valorVenda), 0);
+
+  document.getElementById('kpi-kommo').innerHTML = [
+    { lbl:'Total Leads (Kommo)', val:total,              sub:'base migrada do CRM', color:'var(--gold)' },
+    { lbl:'Qualificados',        val:qualif,             sub:`${total ? ((qualif/total)*100).toFixed(0) : 0}% do total`, color:'var(--accent)' },
+    { lbl:'Calls Agendadas',     val:agendados,          sub:'reuniões marcadas', color:'var(--gold)' },
+    { lbl:'Realizadas/Contratos',val:realiz,             sub:'proposta ou assinatura', color:'var(--teal)' },
+    { lbl:'No-Show MD',          val:noshow,             sub:'não compareceram', color:'var(--red)' },
+    { lbl:'Vendas Fechadas',     val:vendas,             sub:`${total ? ((vendas/total)*100).toFixed(1) : 0}% conversão`, color:'var(--green)' },
+    { lbl:'Faturamento',         val:fmtBRL(fat),        sub:'total vendas', color:'var(--green)', sm:true },
+  ].map(k => `
+    <div class="kpi-card" style="--card-color:${k.color}">
+      <div class="kpi-lbl">${k.lbl}</div>
+      <div class="kpi-val ${k.sm ? 'sm' : ''}">${k.val}</div>
+      <div class="kpi-sub">${k.sub}</div>
+    </div>`).join('');
+
+  const vendasK = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.venda));
+  const qualifK = tasks.filter(t => sMatch(t.status?.status, S_KOMMO.qualif));
+
+  renderBars('chart-funil-vendas-k', topN(countBy(vendasK, t => getDropdown(t, CF.origemLead))), '#30a46c');
+  renderBars('chart-funil-leads-k',  topN(countBy(tasks,   t => getDropdown(t, CF.origemLead))), '#6647f0');
+  renderBars('chart-qualif-k',       topN(countBy(qualifK, t => getDropdown(t, CF.origemLead))), '#ffc53d');
+  renderBars('chart-origem-k',       topN(countBy(tasks,   t => getDropdown(t, CF.origemLead))), '#6647f0');
+  renderBars('chart-fat-leads-k',    topN(countBy(tasks,   t => getDropdown(t, CF.faturamento))), '#ffc53d');
+  renderBars('chart-fat-vendas-k',   topN(countBy(vendasK, t => getDropdown(t, CF.faturamento))), '#30a46c');
+  renderAnuncio('ad-leads-k',  topN(countBy(tasks,   t => getText(t, CF.anuncio))));
+  renderAnuncio('ad-vendas-k', topN(countBy(vendasK, t => getText(t, CF.anuncio))), true);
+}
+
+// ════════════════════════════════════════════════════════════
+// COUNTDOWN
+// ════════════════════════════════════════════════════════════
+function startTimer() {
+  if (timerRef) clearInterval(timerRef);
+  timerSecs = 300;
+  timerRef = setInterval(() => {
+    timerSecs--;
+    const m = Math.floor(timerSecs / 60);
+    const s = timerSecs % 60;
+    document.getElementById('countdown').textContent = `próx. em ${m}:${String(s).padStart(2,'0')}`;
+    if (timerSecs <= 0) { timerSecs = 300; loadData(); }
+  }, 1000);
+}
+
+// ════════════════════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════════════════════
+async function loadData() {
+  try {
+    document.getElementById('loading-state').classList.add('visible');
+    document.getElementById('dashboard').style.display = 'none';
+    await loadAll();
+    document.getElementById('last-update').textContent = new Date().toLocaleTimeString('pt-BR');
+    filteredVendas = allVendasTasks;
+    renderVendas();
+    renderKommo();
+    document.getElementById('loading-state').classList.remove('visible');
+    document.getElementById('dashboard').style.display = 'block';
+  } catch(err) {
+    document.getElementById('loading-state').innerHTML =
+      `<p style="color:var(--red)">❌ Erro: ${err.message}</p>
+       <p style="font-size:12px;color:var(--muted);margin-top:8px;">Verifique o token da API.</p>`;
+    document.getElementById('loading-state').classList.add('visible');
+  }
+}
+
+function init() {
+  if (!getToken()) { document.getElementById('token-setup').classList.add('visible'); return; }
+  loadData();
+  startTimer();
+}
+
+init();
+</script>
+</body>
+</html>
