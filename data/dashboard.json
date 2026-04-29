@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-04-29T20:41:05.279Z",
-  "geradoEmBR": "29/04/2026, 17:41:05",
+  "geradoEm": "2026-04-29T20:46:12.156Z",
+  "geradoEmBR": "29/04/2026, 17:46:12",
   "geral": {
     "vendedor": "Geral",
     "total": 705,
@@ -29,10 +29,10 @@
     },
     "porFaturamento": {
       "Não informado": 338,
-      "De R$50 mil a R$100 mil": 88,
+      "De R$50 mil a R$100 mil": 87,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
-      "De R$20 mil a R$30 mil": 3,
+      "De R$20 mil a R$30 mil": 4,
       "De R$100 a R$200 mil": 50,
       "Acima de R$200 mil": 23,
       "Abaixo de R$15 mil": 47,
@@ -236,8 +236,8 @@
         "De R$15 mil a R$30 mil": 1,
         "Não informado": 17,
         "De R$30 mil a R$50 mil": 1,
-        "De R$50 mil a R$100 mil": 4,
-        "De R$20 mil a R$30 mil": 2,
+        "De R$50 mil a R$100 mil": 3,
+        "De R$20 mil a R$30 mil": 3,
         "Acima de R$100 mil": 1
       },
       "porAnuncio": {
