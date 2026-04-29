@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-04-29T00:37:24.647Z",
-  "geradoEmBR": "28/04/2026, 21:37:24",
+  "geradoEm": "2026-04-29T00:37:27.036Z",
+  "geradoEmBR": "28/04/2026, 21:37:27",
   "geral": {
     "vendedor": "Geral",
-    "total": 329,
-    "novoLead": 174,
-    "contatado": 20,
+    "total": 17,
+    "novoLead": 0,
+    "contatado": 0,
     "emConducao": 0,
-    "agendado": 16,
-    "followUp": 119,
+    "agendado": 0,
+    "followUp": 15,
     "venda": 0,
-    "perdido": 0,
+    "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 155,
+    "contatadosTotal": 17,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -20,42 +20,22 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Não informado": 1,
-      "Kommo": 277,
-      "Indicação": 14,
-      "Formulário Bio": 25,
-      "Formulário Meta": 12
+      "Kommo": 10,
+      "Formulário Bio": 5,
+      "ROY-SDR": 2
     },
     "porFaturamento": {
-      "Não informado": 229,
-      "De R$50 mil a R$100 mil": 12,
-      "De R$15 mil a R$30 mil": 7,
-      "De R$30 mil a R$50 mil": 30,
-      "De R$20 mil a R$30 mil": 3,
-      "De R$100 a R$200 mil": 25,
-      "Acima de R$200 mil": 6,
-      "Abaixo de R$15 mil": 16,
-      "Acima de R$100 mil": 1
+      "Não informado": 3,
+      "De R$30 mil a R$50 mil": 8,
+      "De R$100 a R$200 mil": 2,
+      "Abaixo de R$15 mil": 4
     },
-    "porAnuncio": {
-      "AD05.5 - PBE Carol": 1,
-      "AD01.5 - PBE Carol — Cópia": 1,
-      "AD05.3 - PBE 2026 não é para ...": 1,
-      "AD02.5 - Criativo 2": 9
-    },
-    "porCampanha": {
-      "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 3,
-      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 9
-    },
+    "porAnuncio": {},
+    "porCampanha": {},
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 327,
-        "vendas": 0,
-        "faturamento": 0
-      },
-      "Abril": {
-        "leads": 2,
+        "leads": 17,
         "vendas": 0,
         "faturamento": 0
       }
@@ -64,62 +44,6 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 292,
-      "novoLead": 137,
-      "contatado": 20,
-      "emConducao": 0,
-      "agendado": 16,
-      "followUp": 119,
-      "venda": 0,
-      "perdido": 0,
-      "desqualificado": 0,
-      "contatadosTotal": 155,
-      "faturamento": 0,
-      "ligacoes": 0,
-      "followUps": 0,
-      "reunioesAgendadas": 0,
-      "reunioesRealizadas": 0,
-      "noShow": 0,
-      "porOrigem": {
-        "Não informado": 1,
-        "Kommo": 262,
-        "Indicação": 14,
-        "Formulário Bio": 13,
-        "Formulário Meta": 2
-      },
-      "porFaturamento": {
-        "Não informado": 212,
-        "De R$50 mil a R$100 mil": 8,
-        "De R$15 mil a R$30 mil": 6,
-        "De R$30 mil a R$50 mil": 29,
-        "De R$20 mil a R$30 mil": 1,
-        "De R$100 a R$200 mil": 25,
-        "Acima de R$200 mil": 6,
-        "Abaixo de R$15 mil": 5
-      },
-      "porAnuncio": {
-        "AD05.5 - PBE Carol": 1,
-        "AD01.5 - PBE Carol — Cópia": 1
-      },
-      "porCampanha": {
-        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 2
-      },
-      "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 290,
-          "vendas": 0,
-          "faturamento": 0
-        },
-        "Abril": {
-          "leads": 2,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
-    },
-    "lais": {
-      "vendedor": "Laís",
       "total": 0,
       "novoLead": 0,
       "contatado": 0,
@@ -142,6 +66,46 @@
       "porCampanha": {},
       "porProduto": {},
       "porMes": {}
+    },
+    "lais": {
+      "vendedor": "Laís",
+      "total": 17,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 15,
+      "venda": 0,
+      "perdido": 2,
+      "desqualificado": 0,
+      "contatadosTotal": 17,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "porOrigem": {
+        "Kommo": 10,
+        "Formulário Bio": 5,
+        "ROY-SDR": 2
+      },
+      "porFaturamento": {
+        "Não informado": 3,
+        "De R$30 mil a R$50 mil": 8,
+        "De R$100 a R$200 mil": 2,
+        "Abaixo de R$15 mil": 4
+      },
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {
+        "Não informado": {
+          "leads": 17,
+          "vendas": 0,
+          "faturamento": 0
+        }
+      }
     },
     "diogo": {
       "vendedor": "Diogo",
@@ -170,8 +134,8 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 37,
-      "novoLead": 37,
+      "total": 0,
+      "novoLead": 0,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -186,36 +150,12 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
-      "porOrigem": {
-        "Formulário Bio": 12,
-        "Kommo": 15,
-        "Formulário Meta": 10
-      },
-      "porFaturamento": {
-        "Abaixo de R$15 mil": 11,
-        "De R$15 mil a R$30 mil": 1,
-        "Não informado": 17,
-        "De R$30 mil a R$50 mil": 1,
-        "De R$50 mil a R$100 mil": 4,
-        "De R$20 mil a R$30 mil": 2,
-        "Acima de R$100 mil": 1
-      },
-      "porAnuncio": {
-        "AD05.3 - PBE 2026 não é para ...": 1,
-        "AD02.5 - Criativo 2": 9
-      },
-      "porCampanha": {
-        "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 1,
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 9
-      },
+      "porOrigem": {},
+      "porFaturamento": {},
+      "porAnuncio": {},
+      "porCampanha": {},
       "porProduto": {},
-      "porMes": {
-        "Não informado": {
-          "leads": 37,
-          "vendas": 0,
-          "faturamento": 0
-        }
-      }
+      "porMes": {}
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
@@ -303,41 +243,12 @@
       "posicao": 3
     }
   ],
-  "anuncios": [
-    {
-      "nome": "AD02.5 - Criativo 2",
-      "leads": 9,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD05.5 - PBE Carol",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD01.5 - PBE Carol — Cópia",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    },
-    {
-      "nome": "AD05.3 - PBE 2026 não é para ...",
-      "leads": 1,
-      "vendas": 0,
-      "faturamento": 0,
-      "txConv": 0
-    }
-  ],
+  "anuncios": [],
   "debug": {
-    "totalItens": 329,
+    "totalItens": 18,
     "porLista": {
-      "901326991205": 292,
-      "901326992673": 37
+      "901326992671": 17,
+      "901326992549": 1
     }
   }
 }
