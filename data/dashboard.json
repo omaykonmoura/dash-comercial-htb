@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-04-29T00:56:21.175Z",
-  "geradoEmBR": "28/04/2026, 21:56:21",
+  "geradoEm": "2026-04-29T01:01:20.245Z",
+  "geradoEmBR": "28/04/2026, 22:01:20",
   "geral": {
     "vendedor": "Geral",
-    "total": 704,
-    "novoLead": 232,
+    "total": 705,
+    "novoLead": 233,
     "contatado": 206,
     "emConducao": 1,
     "agendado": 23,
@@ -20,7 +20,7 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Não informado": 7,
+      "Não informado": 8,
       "Kommo": 492,
       "Indicação": 34,
       "Formulário Bio": 116,
@@ -28,7 +28,7 @@
       "ROY-SDR": 38
     },
     "porFaturamento": {
-      "Não informado": 337,
+      "Não informado": 338,
       "De R$50 mil a R$100 mil": 88,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 702,
+        "leads": 703,
         "vendas": 0,
         "faturamento": 0
       },
@@ -70,8 +70,8 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 292,
-      "novoLead": 137,
+      "total": 293,
+      "novoLead": 138,
       "contatado": 20,
       "emConducao": 0,
       "agendado": 16,
@@ -87,14 +87,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Não informado": 1,
+        "Não informado": 2,
         "Kommo": 262,
         "Indicação": 14,
         "Formulário Bio": 13,
         "Formulário Meta": 2
       },
       "porFaturamento": {
-        "Não informado": 212,
+        "Não informado": 213,
         "De R$50 mil a R$100 mil": 8,
         "De R$15 mil a R$30 mil": 6,
         "De R$30 mil a R$50 mil": 29,
@@ -113,7 +113,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 290,
+          "leads": 291,
           "vendas": 0,
           "faturamento": 0
         },
@@ -427,9 +427,9 @@
     }
   ],
   "debug": {
-    "totalItens": 705,
+    "totalItens": 706,
     "porLista": {
-      "901326991205": 292,
+      "901326991205": 293,
       "901326992671": 17,
       "901326992672": 312,
       "901326992677": 5,
