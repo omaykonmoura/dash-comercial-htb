@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-04-30T19:11:04.286Z",
-  "geradoEmBR": "30/04/2026, 16:11:04",
+  "geradoEm": "2026-04-30T19:16:04.882Z",
+  "geradoEmBR": "30/04/2026, 16:16:04",
   "geral": {
     "vendedor": "Geral",
-    "total": 707,
-    "novoLead": 236,
+    "total": 706,
+    "novoLead": 235,
     "contatado": 205,
     "emConducao": 1,
     "agendado": 23,
@@ -20,16 +20,16 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Formulário Bio": 118,
       "Kommo": 491,
       "Indicação": 34,
+      "Formulário Bio": 117,
       "Formulário Meta": 20,
       "ROY-SDR": 38,
       "Não informado": 6
     },
     "porFaturamento": {
-      "De R$50 mil a R$100 mil": 88,
       "Não informado": 335,
+      "De R$50 mil a R$100 mil": 87,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 6,
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 705,
+        "leads": 704,
         "vendas": 0,
         "faturamento": 0
       },
@@ -70,8 +70,8 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 291,
-      "novoLead": 137,
+      "total": 290,
+      "novoLead": 136,
       "contatado": 19,
       "emConducao": 0,
       "agendado": 16,
@@ -87,14 +87,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Bio": 14,
         "Kommo": 261,
         "Indicação": 14,
+        "Formulário Bio": 13,
         "Formulário Meta": 2
       },
       "porFaturamento": {
-        "De R$50 mil a R$100 mil": 9,
         "Não informado": 210,
+        "De R$50 mil a R$100 mil": 8,
         "De R$15 mil a R$30 mil": 6,
         "De R$30 mil a R$50 mil": 29,
         "De R$20 mil a R$30 mil": 1,
@@ -112,7 +112,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 289,
+          "leads": 288,
           "vendas": 0,
           "faturamento": 0
         },
@@ -432,9 +432,9 @@
     }
   ],
   "debug": {
-    "totalItens": 707,
+    "totalItens": 706,
     "porLista": {
-      "901326991205": 291,
+      "901326991205": 290,
       "901326992671": 17,
       "901326992672": 312,
       "901326992677": 9,
