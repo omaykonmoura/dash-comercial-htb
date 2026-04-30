@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-04-30T11:56:03.658Z",
-  "geradoEmBR": "30/04/2026, 08:56:03",
+  "geradoEm": "2026-04-30T12:01:09.573Z",
+  "geradoEmBR": "30/04/2026, 09:01:09",
   "geral": {
     "vendedor": "Geral",
-    "total": 706,
-    "novoLead": 234,
+    "total": 707,
+    "novoLead": 235,
     "contatado": 206,
     "emConducao": 1,
     "agendado": 23,
@@ -23,7 +23,7 @@
       "Formulário Bio": 118,
       "Kommo": 492,
       "Indicação": 34,
-      "Formulário Meta": 18,
+      "Formulário Meta": 19,
       "ROY-SDR": 38,
       "Não informado": 6
     },
@@ -32,7 +32,7 @@
       "Não informado": 336,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
-      "De R$20 mil a R$30 mil": 5,
+      "De R$20 mil a R$30 mil": 6,
       "De R$100 a R$200 mil": 50,
       "Acima de R$200 mil": 24,
       "Abaixo de R$15 mil": 47,
@@ -42,7 +42,7 @@
     "porAnuncio": {
       "AD05.5 - PBE Carol": 1,
       "AD01.5 - PBE Carol — Cópia": 2,
-      "AD02.5 - Criativo 2": 10,
+      "AD02.5 - Criativo 2": 11,
       "AD00.7 - Vídeo Antigo": 1,
       "AD00.6 - Vídeo Vânia": 1,
       "AD01.3 - PBE 2026 não é para ...": 2,
@@ -50,13 +50,13 @@
     },
     "porCampanha": {
       "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 6,
-      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 10,
+      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 11,
       "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 2
     },
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 704,
+        "leads": 705,
         "vendas": 0,
         "faturamento": 0
       },
@@ -258,8 +258,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 7,
-      "novoLead": 7,
+      "total": 8,
+      "novoLead": 8,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -275,32 +275,32 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 6,
+        "Formulário Meta": 7,
         "Formulário Bio": 1
       },
       "porFaturamento": {
-        "De R$20 mil a R$30 mil": 1,
+        "De R$20 mil a R$30 mil": 2,
         "Acima de R$200 mil": 1,
         "erro": 2,
         "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1
       },
       "porAnuncio": {
-        "AD02.5 - Criativo 2": 1,
+        "AD02.5 - Criativo 2": 2,
         "AD00.7 - Vídeo Antigo": 1,
         "AD00.6 - Vídeo Vânia": 1,
         "AD01.5 - PBE Carol — Cópia": 1,
         "AD01.3 - PBE 2026 não é para ...": 2
       },
       "porCampanha": {
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 1,
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 2,
         "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 2,
         "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 3
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 7,
+          "leads": 8,
           "vendas": 0,
           "faturamento": 0
         }
@@ -382,7 +382,7 @@
   "anuncios": [
     {
       "nome": "AD02.5 - Criativo 2",
-      "leads": 10,
+      "leads": 11,
       "vendas": 0,
       "faturamento": 0,
       "txConv": 0
@@ -431,12 +431,12 @@
     }
   ],
   "debug": {
-    "totalItens": 706,
+    "totalItens": 707,
     "porLista": {
       "901326991205": 292,
       "901326992671": 17,
       "901326992672": 312,
-      "901326992677": 7,
+      "901326992677": 8,
       "901326992673": 37,
       "901327014968": 41
     }
