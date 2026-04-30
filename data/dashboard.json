@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-04-30T00:36:11.697Z",
-  "geradoEmBR": "29/04/2026, 21:36:11",
+  "geradoEm": "2026-04-30T00:41:06.249Z",
+  "geradoEmBR": "29/04/2026, 21:41:06",
   "geral": {
     "vendedor": "Geral",
     "total": 704,
-    "novoLead": 231,
+    "novoLead": 232,
     "contatado": 206,
     "emConducao": 1,
-    "agendado": 24,
+    "agendado": 23,
     "followUp": 240,
     "venda": 0,
     "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 473,
+    "contatadosTotal": 472,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -71,15 +71,15 @@
     "gleison": {
       "vendedor": "Gleison",
       "total": 292,
-      "novoLead": 136,
+      "novoLead": 137,
       "contatado": 20,
       "emConducao": 0,
-      "agendado": 17,
+      "agendado": 16,
       "followUp": 119,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 156,
+      "contatadosTotal": 155,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -426,14 +426,13 @@
     }
   ],
   "debug": {
-    "totalItens": 705,
+    "totalItens": 704,
     "porLista": {
       "901326991205": 292,
       "901326992671": 17,
       "901326992672": 312,
       "901326992677": 5,
       "901326992673": 37,
-      "901326992549": 1,
       "901327014968": 41
     }
   }
