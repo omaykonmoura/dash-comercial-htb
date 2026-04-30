@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-04-30T00:26:09.630Z",
-  "geradoEmBR": "29/04/2026, 21:26:09",
+  "geradoEm": "2026-04-30T00:31:05.819Z",
+  "geradoEmBR": "29/04/2026, 21:31:05",
   "geral": {
     "vendedor": "Geral",
     "total": 705,
@@ -20,16 +20,16 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Não informado": 8,
+      "Formulário Bio": 117,
+      "Não informado": 7,
       "Kommo": 492,
       "Indicação": 34,
-      "Formulário Bio": 116,
       "Formulário Meta": 17,
       "ROY-SDR": 38
     },
     "porFaturamento": {
-      "Não informado": 338,
-      "De R$50 mil a R$100 mil": 87,
+      "De R$50 mil a R$100 mil": 88,
+      "Não informado": 337,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 4,
@@ -87,15 +87,15 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Não informado": 2,
+        "Formulário Bio": 14,
+        "Não informado": 1,
         "Kommo": 262,
         "Indicação": 14,
-        "Formulário Bio": 13,
         "Formulário Meta": 2
       },
       "porFaturamento": {
-        "Não informado": 213,
-        "De R$50 mil a R$100 mil": 8,
+        "De R$50 mil a R$100 mil": 9,
+        "Não informado": 212,
         "De R$15 mil a R$30 mil": 6,
         "De R$30 mil a R$50 mil": 29,
         "De R$20 mil a R$30 mil": 1,
