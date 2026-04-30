@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-04-30T19:06:07.052Z",
-  "geradoEmBR": "30/04/2026, 16:06:07",
+  "geradoEm": "2026-04-30T19:11:04.286Z",
+  "geradoEmBR": "30/04/2026, 16:11:04",
   "geral": {
     "vendedor": "Geral",
-    "total": 708,
+    "total": 707,
     "novoLead": 236,
-    "contatado": 206,
+    "contatado": 205,
     "emConducao": 1,
     "agendado": 23,
     "followUp": 240,
     "venda": 0,
     "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 472,
+    "contatadosTotal": 471,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -21,7 +21,7 @@
     "noShow": 0,
     "porOrigem": {
       "Formulário Bio": 118,
-      "Kommo": 492,
+      "Kommo": 491,
       "Indicação": 34,
       "Formulário Meta": 20,
       "ROY-SDR": 38,
@@ -29,7 +29,7 @@
     },
     "porFaturamento": {
       "De R$50 mil a R$100 mil": 88,
-      "Não informado": 336,
+      "Não informado": 335,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 6,
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 706,
+        "leads": 705,
         "vendas": 0,
         "faturamento": 0
       },
@@ -70,16 +70,16 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 292,
+      "total": 291,
       "novoLead": 137,
-      "contatado": 20,
+      "contatado": 19,
       "emConducao": 0,
       "agendado": 16,
       "followUp": 119,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 155,
+      "contatadosTotal": 154,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -88,13 +88,13 @@
       "noShow": 0,
       "porOrigem": {
         "Formulário Bio": 14,
-        "Kommo": 262,
+        "Kommo": 261,
         "Indicação": 14,
         "Formulário Meta": 2
       },
       "porFaturamento": {
         "De R$50 mil a R$100 mil": 9,
-        "Não informado": 211,
+        "Não informado": 210,
         "De R$15 mil a R$30 mil": 6,
         "De R$30 mil a R$50 mil": 29,
         "De R$20 mil a R$30 mil": 1,
@@ -112,7 +112,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 290,
+          "leads": 289,
           "vendas": 0,
           "faturamento": 0
         },
@@ -432,9 +432,9 @@
     }
   ],
   "debug": {
-    "totalItens": 708,
+    "totalItens": 707,
     "porLista": {
-      "901326991205": 292,
+      "901326991205": 291,
       "901326992671": 17,
       "901326992672": 312,
       "901326992677": 9,
