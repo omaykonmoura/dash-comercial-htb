@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-04-30T00:51:05.308Z",
-  "geradoEmBR": "29/04/2026, 21:51:05",
+  "geradoEm": "2026-04-30T00:56:11.228Z",
+  "geradoEmBR": "29/04/2026, 21:56:11",
   "geral": {
     "vendedor": "Geral",
-    "total": 704,
-    "novoLead": 232,
+    "total": 705,
+    "novoLead": 233,
     "contatado": 206,
     "emConducao": 1,
     "agendado": 23,
@@ -20,7 +20,7 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "Formulário Bio": 117,
+      "Formulário Bio": 118,
       "Kommo": 492,
       "Indicação": 34,
       "Formulário Meta": 17,
@@ -34,7 +34,7 @@
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 4,
       "De R$100 a R$200 mil": 50,
-      "Acima de R$200 mil": 23,
+      "Acima de R$200 mil": 24,
       "Abaixo de R$15 mil": 47,
       "erro": 2,
       "Acima de R$100 mil": 1
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 702,
+        "leads": 703,
         "vendas": 0,
         "faturamento": 0
       },
@@ -258,8 +258,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 5,
-      "novoLead": 5,
+      "total": 6,
+      "novoLead": 6,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -275,9 +275,11 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
+        "Formulário Bio": 1,
         "Formulário Meta": 5
       },
       "porFaturamento": {
+        "Acima de R$200 mil": 1,
         "erro": 2,
         "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1
@@ -295,7 +297,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 5,
+          "leads": 6,
           "vendas": 0,
           "faturamento": 0
         }
@@ -426,12 +428,12 @@
     }
   ],
   "debug": {
-    "totalItens": 704,
+    "totalItens": 705,
     "porLista": {
       "901326991205": 292,
       "901326992671": 17,
       "901326992672": 312,
-      "901326992677": 5,
+      "901326992677": 6,
       "901326992673": 37,
       "901327014968": 41
     }
