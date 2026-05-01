@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-05-01T17:16:14.754Z",
-  "geradoEmBR": "01/05/2026, 14:16:14",
+  "geradoEm": "2026-05-01T17:21:12.347Z",
+  "geradoEmBR": "01/05/2026, 14:21:12",
   "geral": {
     "vendedor": "Geral",
-    "total": 711,
+    "total": 712,
     "novoLead": 235,
     "contatado": 209,
     "emConducao": 2,
-    "agendado": 23,
+    "agendado": 24,
     "followUp": 240,
     "venda": 0,
     "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 476,
+    "contatadosTotal": 477,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -20,14 +20,15 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
+      "ROY-SDR": 38,
       "Formulário Bio": 118,
       "Kommo": 496,
       "Indicação": 34,
       "Formulário Meta": 20,
-      "ROY-SDR": 37,
       "Não informado": 6
     },
     "porFaturamento": {
+      "Acima de R$100 mil": 2,
       "De R$50 mil a R$100 mil": 88,
       "Não informado": 339,
       "De R$15 mil a R$30 mil": 25,
@@ -36,8 +37,7 @@
       "De R$100 a R$200 mil": 50,
       "Acima de R$200 mil": 24,
       "Abaixo de R$15 mil": 47,
-      "erro": 2,
-      "Acima de R$100 mil": 1
+      "erro": 2
     },
     "porAnuncio": {
       "AD05.5 - PBE Carol": 1,
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 709,
+        "leads": 710,
         "vendas": 0,
         "faturamento": 0
       },
@@ -70,16 +70,16 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 290,
+      "total": 291,
       "novoLead": 135,
       "contatado": 20,
       "emConducao": 0,
-      "agendado": 16,
+      "agendado": 17,
       "followUp": 119,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 155,
+      "contatadosTotal": 156,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -87,12 +87,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
+        "ROY-SDR": 1,
         "Formulário Bio": 14,
         "Kommo": 260,
         "Indicação": 14,
         "Formulário Meta": 2
       },
       "porFaturamento": {
+        "Acima de R$100 mil": 1,
         "De R$50 mil a R$100 mil": 9,
         "Não informado": 209,
         "De R$15 mil a R$30 mil": 6,
@@ -112,7 +114,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 288,
+          "leads": 289,
           "vendas": 0,
           "faturamento": 0
         },
@@ -125,16 +127,16 @@
     },
     "lais": {
       "vendedor": "Laís",
-      "total": 28,
-      "novoLead": 2,
+      "total": 30,
+      "novoLead": 3,
       "contatado": 9,
       "emConducao": 0,
-      "agendado": 0,
+      "agendado": 1,
       "followUp": 15,
       "venda": 0,
       "perdido": 2,
       "desqualificado": 0,
-      "contatadosTotal": 26,
+      "contatadosTotal": 27,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -145,12 +147,12 @@
         "Formulário Meta": 2,
         "Kommo": 10,
         "Formulário Bio": 5,
-        "ROY-SDR": 7,
+        "ROY-SDR": 9,
         "Não informado": 4
       },
       "porFaturamento": {
         "De R$20 mil a R$30 mil": 2,
-        "Não informado": 12,
+        "Não informado": 14,
         "De R$30 mil a R$50 mil": 8,
         "De R$100 a R$200 mil": 2,
         "Abaixo de R$15 mil": 4
@@ -164,7 +166,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 28,
+          "leads": 30,
           "vendas": 0,
           "faturamento": 0
         }
@@ -172,8 +174,8 @@
     },
     "diogo": {
       "vendedor": "Diogo",
-      "total": 328,
-      "novoLead": 46,
+      "total": 330,
+      "novoLead": 48,
       "contatado": 168,
       "emConducao": 2,
       "agendado": 6,
@@ -191,14 +193,14 @@
       "porOrigem": {
         "Formulário Meta": 2,
         "Formulário Bio": 87,
-        "Kommo": 205,
+        "Kommo": 206,
         "Indicação": 20,
-        "ROY-SDR": 14
+        "ROY-SDR": 15
       },
       "porFaturamento": {
         "De R$20 mil a R$30 mil": 1,
         "Acima de R$200 mil": 18,
-        "Não informado": 77,
+        "Não informado": 79,
         "De R$15 mil a R$30 mil": 18,
         "De R$30 mil a R$50 mil": 90,
         "De R$50 mil a R$100 mil": 74,
@@ -216,7 +218,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 328,
+          "leads": 330,
           "vendas": 0,
           "faturamento": 0
         }
@@ -224,8 +226,8 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 42,
-      "novoLead": 42,
+      "total": 41,
+      "novoLead": 41,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -242,14 +244,14 @@
       "noShow": 0,
       "porOrigem": {
         "Formulário Bio": 12,
-        "Kommo": 20,
+        "Kommo": 19,
         "Não informado": 1,
         "Formulário Meta": 9
       },
       "porFaturamento": {
         "Abaixo de R$15 mil": 11,
         "De R$15 mil a R$30 mil": 1,
-        "Não informado": 23,
+        "Não informado": 22,
         "De R$50 mil a R$100 mil": 3,
         "De R$20 mil a R$30 mil": 3,
         "Acima de R$100 mil": 1
@@ -263,7 +265,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 42,
+          "leads": 41,
           "vendas": 0,
           "faturamento": 0
         }
@@ -316,16 +318,16 @@
     },
     "roy": {
       "vendedor": "ROY SDR",
-      "total": 18,
-      "novoLead": 5,
+      "total": 15,
+      "novoLead": 3,
       "contatado": 12,
       "emConducao": 0,
-      "agendado": 1,
+      "agendado": 0,
       "followUp": 0,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 13,
+      "contatadosTotal": 12,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -333,19 +335,19 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "ROY-SDR": 16,
+        "ROY-SDR": 13,
         "Não informado": 1,
         "Kommo": 1
       },
       "porFaturamento": {
-        "Não informado": 18
+        "Não informado": 15
       },
       "porAnuncio": {},
       "porCampanha": {},
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 18,
+          "leads": 15,
           "vendas": 0,
           "faturamento": 0
         }
@@ -439,16 +441,16 @@
     }
   ],
   "debug": {
-    "totalItens": 719,
+    "totalItens": 720,
     "porLista": {
-      "901326991205": 290,
-      "901326992671": 28,
-      "901326992672": 328,
+      "901326991205": 291,
+      "901326992671": 30,
+      "901326992672": 330,
       "901326992677": 5,
-      "901326992673": 42,
+      "901326992673": 41,
       "901326990978": 7,
       "901326992549": 1,
-      "901327014968": 18
+      "901327014968": 15
     }
   }
 }
