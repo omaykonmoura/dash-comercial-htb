@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-01T18:01:14.951Z",
-  "geradoEmBR": "01/05/2026, 15:01:14",
+  "geradoEm": "2026-05-01T18:06:08.564Z",
+  "geradoEmBR": "01/05/2026, 15:06:08",
   "geral": {
     "vendedor": "Geral",
     "total": 716,
@@ -176,8 +176,8 @@
     },
     "diogo": {
       "vendedor": "Diogo",
-      "total": 329,
-      "novoLead": 49,
+      "total": 328,
+      "novoLead": 48,
       "contatado": 166,
       "emConducao": 2,
       "agendado": 6,
@@ -196,11 +196,11 @@
         "Kommo": 206,
         "Formulário Bio": 86,
         "Indicação": 20,
-        "ROY-SDR": 16,
+        "ROY-SDR": 15,
         "Formulário Meta": 1
       },
       "porFaturamento": {
-        "Não informado": 80,
+        "Não informado": 79,
         "De R$15 mil a R$30 mil": 18,
         "De R$30 mil a R$50 mil": 90,
         "De R$50 mil a R$100 mil": 74,
@@ -217,7 +217,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 329,
+          "leads": 328,
           "vendas": 0,
           "faturamento": 0
         }
@@ -225,8 +225,8 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 46,
-      "novoLead": 46,
+      "total": 47,
+      "novoLead": 47,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -245,6 +245,7 @@
         "Formulário Bio": 14,
         "Formulário Meta": 12,
         "Kommo": 19,
+        "ROY-SDR": 1,
         "Não informado": 1
       },
       "porFaturamento": {
@@ -254,7 +255,7 @@
         "De R$30 mil a R$50 mil": 1,
         "Abaixo de R$15 mil": 11,
         "De R$15 mil a R$30 mil": 1,
-        "Não informado": 22,
+        "Não informado": 23,
         "Acima de R$100 mil": 1
       },
       "porAnuncio": {
@@ -266,7 +267,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 46,
+          "leads": 47,
           "vendas": 0,
           "faturamento": 0
         }
@@ -463,9 +464,9 @@
     "porLista": {
       "901326991205": 283,
       "901326992671": 37,
-      "901326992672": 329,
+      "901326992672": 328,
       "901326992677": 7,
-      "901326992673": 46,
+      "901326992673": 47,
       "901326990978": 7,
       "901326992549": 1,
       "901327014968": 14
