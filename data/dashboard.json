@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-01T17:21:12.347Z",
-  "geradoEmBR": "01/05/2026, 14:21:12",
+  "geradoEm": "2026-05-01T17:26:06.316Z",
+  "geradoEmBR": "01/05/2026, 14:26:06",
   "geral": {
     "vendedor": "Geral",
     "total": 712,
@@ -174,8 +174,8 @@
     },
     "diogo": {
       "vendedor": "Diogo",
-      "total": 330,
-      "novoLead": 48,
+      "total": 331,
+      "novoLead": 49,
       "contatado": 168,
       "emConducao": 2,
       "agendado": 6,
@@ -195,12 +195,12 @@
         "Formulário Bio": 87,
         "Kommo": 206,
         "Indicação": 20,
-        "ROY-SDR": 15
+        "ROY-SDR": 16
       },
       "porFaturamento": {
         "De R$20 mil a R$30 mil": 1,
         "Acima de R$200 mil": 18,
-        "Não informado": 79,
+        "Não informado": 80,
         "De R$15 mil a R$30 mil": 18,
         "De R$30 mil a R$50 mil": 90,
         "De R$50 mil a R$100 mil": 74,
@@ -218,7 +218,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 330,
+          "leads": 331,
           "vendas": 0,
           "faturamento": 0
         }
@@ -318,8 +318,8 @@
     },
     "roy": {
       "vendedor": "ROY SDR",
-      "total": 15,
-      "novoLead": 3,
+      "total": 14,
+      "novoLead": 2,
       "contatado": 12,
       "emConducao": 0,
       "agendado": 0,
@@ -335,19 +335,19 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "ROY-SDR": 13,
+        "ROY-SDR": 12,
         "Não informado": 1,
         "Kommo": 1
       },
       "porFaturamento": {
-        "Não informado": 15
+        "Não informado": 14
       },
       "porAnuncio": {},
       "porCampanha": {},
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 15,
+          "leads": 14,
           "vendas": 0,
           "faturamento": 0
         }
@@ -445,12 +445,12 @@
     "porLista": {
       "901326991205": 291,
       "901326992671": 30,
-      "901326992672": 330,
+      "901326992672": 331,
       "901326992677": 5,
       "901326992673": 41,
       "901326990978": 7,
       "901326992549": 1,
-      "901327014968": 15
+      "901327014968": 14
     }
   }
 }
