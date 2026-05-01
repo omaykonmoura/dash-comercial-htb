@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-05-01T21:06:08.048Z",
-  "geradoEmBR": "01/05/2026, 18:06:08",
+  "geradoEm": "2026-05-01T21:11:04.501Z",
+  "geradoEmBR": "01/05/2026, 18:11:04",
   "geral": {
     "vendedor": "Geral",
-    "total": 729,
-    "novoLead": 251,
+    "total": 731,
+    "novoLead": 253,
     "contatado": 207,
     "emConducao": 3,
     "agendado": 23,
@@ -24,13 +24,13 @@
       "Kommo": 496,
       "Indicação": 34,
       "Formulário Bio": 118,
-      "Formulário Meta": 36,
+      "Formulário Meta": 38,
       "Não informado": 6
     },
     "porFaturamento": {
-      "Não informado": 354,
+      "Não informado": 355,
       "Acima de R$100 mil": 2,
-      "De R$50 mil a R$100 mil": 88,
+      "De R$50 mil a R$100 mil": 89,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 130,
       "De R$20 mil a R$30 mil": 7,
@@ -44,21 +44,22 @@
       "AD01.5 - PBE Carol — Cópia": 2,
       "AD05.3 - PBE 2026 não é para ...": 1,
       "AD01.3 - PBE 2026 não é para ...": 2,
+      "AD00.7 - Vídeo Antigo": 13,
+      "AD02.1 - Vídeo 1 maykon": 1,
       "AD00.7 - Vídeo Antigo — Cópia": 2,
-      "AD00.7 - Vídeo Antigo": 12,
       "AD02.5 - Criativo 2": 14,
       "AD00.8 - Vídeo como aumentar o faturamento": 1,
       "AD00.6 - Vídeo Vânia": 1
     },
     "porCampanha": {
       "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 6,
-      "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 16,
-      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 14
+      "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 17,
+      "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 15
     },
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 727,
+        "leads": 729,
         "vendas": 0,
         "faturamento": 0
       },
@@ -271,8 +272,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 18,
-      "novoLead": 18,
+      "total": 20,
+      "novoLead": 20,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -288,31 +289,32 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 18
+        "Formulário Meta": 20
       },
       "porFaturamento": {
-        "Não informado": 14,
+        "Não informado": 15,
+        "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1,
-        "erro": 2,
-        "De R$50 mil a R$100 mil": 1
+        "erro": 2
       },
       "porAnuncio": {
+        "AD00.7 - Vídeo Antigo": 13,
+        "AD02.1 - Vídeo 1 maykon": 1,
         "AD00.7 - Vídeo Antigo — Cópia": 2,
-        "AD00.7 - Vídeo Antigo": 12,
         "AD02.5 - Criativo 2": 1,
         "AD00.8 - Vídeo como aumentar o faturamento": 1,
         "AD00.6 - Vídeo Vânia": 1,
         "AD01.3 - PBE 2026 não é para ...": 1
       },
       "porCampanha": {
-        "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 16,
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 1,
+        "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 17,
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 2,
         "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 1
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 18,
+          "leads": 20,
           "vendas": 0,
           "faturamento": 0
         }
@@ -401,7 +403,7 @@
     },
     {
       "nome": "AD00.7 - Vídeo Antigo",
-      "leads": 12,
+      "leads": 13,
       "vendas": 0,
       "faturamento": 0,
       "txConv": 0
@@ -442,6 +444,13 @@
       "txConv": 0
     },
     {
+      "nome": "AD02.1 - Vídeo 1 maykon",
+      "leads": 1,
+      "vendas": 0,
+      "faturamento": 0,
+      "txConv": 0
+    },
+    {
       "nome": "AD00.8 - Vídeo como aumentar o faturamento",
       "leads": 1,
       "vendas": 0,
@@ -457,12 +466,12 @@
     }
   ],
   "debug": {
-    "totalItens": 738,
+    "totalItens": 740,
     "porLista": {
       "901326991205": 283,
       "901326992671": 36,
       "901326992672": 330,
-      "901326992677": 18,
+      "901326992677": 20,
       "901326992673": 48,
       "901326990978": 8,
       "901326992549": 1,
