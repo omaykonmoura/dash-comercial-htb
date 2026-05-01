@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-05-01T21:21:07.885Z",
-  "geradoEmBR": "01/05/2026, 18:21:07",
+  "geradoEm": "2026-05-01T21:26:04.452Z",
+  "geradoEmBR": "01/05/2026, 18:26:04",
   "geral": {
     "vendedor": "Geral",
-    "total": 731,
-    "novoLead": 253,
+    "total": 732,
+    "novoLead": 254,
     "contatado": 207,
     "emConducao": 3,
     "agendado": 23,
@@ -24,11 +24,11 @@
       "Kommo": 496,
       "Indicação": 34,
       "Formulário Bio": 118,
-      "Formulário Meta": 38,
+      "Formulário Meta": 39,
       "Não informado": 6
     },
     "porFaturamento": {
-      "Não informado": 355,
+      "Não informado": 356,
       "Acima de R$100 mil": 2,
       "De R$50 mil a R$100 mil": 89,
       "De R$15 mil a R$30 mil": 25,
@@ -59,7 +59,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 729,
+        "leads": 730,
         "vendas": 0,
         "faturamento": 0
       },
@@ -272,8 +272,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 20,
-      "novoLead": 20,
+      "total": 21,
+      "novoLead": 21,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -289,10 +289,10 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 20
+        "Formulário Meta": 21
       },
       "porFaturamento": {
-        "Não informado": 15,
+        "Não informado": 16,
         "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1,
         "erro": 2
@@ -314,7 +314,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 20,
+          "leads": 21,
           "vendas": 0,
           "faturamento": 0
         }
@@ -466,12 +466,12 @@
     }
   ],
   "debug": {
-    "totalItens": 740,
+    "totalItens": 741,
     "porLista": {
       "901326991205": 283,
       "901326992671": 36,
       "901326992672": 330,
-      "901326992677": 20,
+      "901326992677": 21,
       "901326992673": 48,
       "901326990978": 8,
       "901326992549": 1,
