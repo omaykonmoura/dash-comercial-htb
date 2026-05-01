@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-01T16:51:09.681Z",
-  "geradoEmBR": "01/05/2026, 13:51:09",
+  "geradoEm": "2026-05-01T16:56:06.585Z",
+  "geradoEmBR": "01/05/2026, 13:56:06",
   "geral": {
     "vendedor": "Geral",
     "total": 712,
@@ -125,16 +125,16 @@
     },
     "lais": {
       "vendedor": "Laís",
-      "total": 19,
+      "total": 20,
       "novoLead": 2,
-      "contatado": 0,
+      "contatado": 1,
       "emConducao": 0,
       "agendado": 0,
       "followUp": 15,
       "venda": 0,
       "perdido": 2,
       "desqualificado": 0,
-      "contatadosTotal": 17,
+      "contatadosTotal": 18,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -145,11 +145,11 @@
         "Formulário Meta": 2,
         "Kommo": 10,
         "Formulário Bio": 5,
-        "ROY-SDR": 2
+        "ROY-SDR": 3
       },
       "porFaturamento": {
         "De R$20 mil a R$30 mil": 2,
-        "Não informado": 3,
+        "Não informado": 4,
         "De R$30 mil a R$50 mil": 8,
         "De R$100 a R$200 mil": 2,
         "Abaixo de R$15 mil": 4
@@ -163,7 +163,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 19,
+          "leads": 20,
           "vendas": 0,
           "faturamento": 0
         }
@@ -315,16 +315,16 @@
     },
     "roy": {
       "vendedor": "ROY SDR",
-      "total": 41,
+      "total": 40,
       "novoLead": 5,
-      "contatado": 35,
+      "contatado": 34,
       "emConducao": 0,
       "agendado": 1,
       "followUp": 0,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 36,
+      "contatadosTotal": 35,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -332,19 +332,19 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "ROY-SDR": 34,
+        "ROY-SDR": 33,
         "Não informado": 6,
         "Kommo": 1
       },
       "porFaturamento": {
-        "Não informado": 41
+        "Não informado": 40
       },
       "porAnuncio": {},
       "porCampanha": {},
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 41,
+          "leads": 40,
           "vendas": 0,
           "faturamento": 0
         }
@@ -441,13 +441,13 @@
     "totalItens": 720,
     "porLista": {
       "901326991205": 290,
-      "901326992671": 19,
+      "901326992671": 20,
       "901326992672": 315,
       "901326992677": 5,
       "901326992673": 42,
       "901326990978": 7,
       "901326992549": 1,
-      "901327014968": 41
+      "901327014968": 40
     }
   }
 }
