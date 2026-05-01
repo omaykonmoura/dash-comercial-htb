@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-05-01T16:06:12.163Z",
-  "geradoEmBR": "01/05/2026, 13:06:12",
+  "geradoEm": "2026-05-01T16:11:04.637Z",
+  "geradoEmBR": "01/05/2026, 13:11:04",
   "geral": {
     "vendedor": "Geral",
     "total": 706,
-    "novoLead": 234,
-    "contatado": 206,
+    "novoLead": 233,
+    "contatado": 207,
     "emConducao": 1,
     "agendado": 23,
     "followUp": 240,
     "venda": 0,
     "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 472,
+    "contatadosTotal": 473,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -125,8 +125,8 @@
     },
     "lais": {
       "vendedor": "Laís",
-      "total": 17,
-      "novoLead": 0,
+      "total": 18,
+      "novoLead": 1,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -142,22 +142,28 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
+        "Formulário Meta": 1,
         "Kommo": 10,
         "Formulário Bio": 5,
         "ROY-SDR": 2
       },
       "porFaturamento": {
+        "De R$20 mil a R$30 mil": 1,
         "Não informado": 3,
         "De R$30 mil a R$50 mil": 8,
         "De R$100 a R$200 mil": 2,
         "Abaixo de R$15 mil": 4
       },
-      "porAnuncio": {},
-      "porCampanha": {},
+      "porAnuncio": {
+        "AD02.5 - Criativo 2": 1
+      },
+      "porCampanha": {
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 1
+      },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 17,
+          "leads": 18,
           "vendas": 0,
           "faturamento": 0
         }
@@ -264,8 +270,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 8,
-      "novoLead": 8,
+      "total": 7,
+      "novoLead": 7,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -281,32 +287,32 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 7,
+        "Formulário Meta": 6,
         "Formulário Bio": 1
       },
       "porFaturamento": {
-        "De R$20 mil a R$30 mil": 2,
+        "De R$20 mil a R$30 mil": 1,
         "Acima de R$200 mil": 1,
         "erro": 2,
         "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1
       },
       "porAnuncio": {
-        "AD02.5 - Criativo 2": 2,
+        "AD02.5 - Criativo 2": 1,
         "AD00.7 - Vídeo Antigo": 1,
         "AD00.6 - Vídeo Vânia": 1,
         "AD01.5 - PBE Carol — Cópia": 1,
         "AD01.3 - PBE 2026 não é para ...": 2
       },
       "porCampanha": {
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 2,
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 1,
         "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 2,
         "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 3
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 8,
+          "leads": 7,
           "vendas": 0,
           "faturamento": 0
         }
@@ -315,15 +321,15 @@
     "roy": {
       "vendedor": "ROY SDR",
       "total": 41,
-      "novoLead": 7,
-      "contatado": 33,
+      "novoLead": 6,
+      "contatado": 34,
       "emConducao": 0,
       "agendado": 1,
       "followUp": 0,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 34,
+      "contatadosTotal": 35,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -440,9 +446,9 @@
     "totalItens": 711,
     "porLista": {
       "901326991205": 290,
-      "901326992671": 17,
+      "901326992671": 18,
       "901326992672": 313,
-      "901326992677": 8,
+      "901326992677": 7,
       "901326992673": 37,
       "901326990978": 4,
       "901326992549": 1,
