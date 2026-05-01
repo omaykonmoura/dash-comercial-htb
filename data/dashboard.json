@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-01T16:21:10.425Z",
-  "geradoEmBR": "01/05/2026, 13:21:10",
+  "geradoEm": "2026-05-01T16:26:08.748Z",
+  "geradoEmBR": "01/05/2026, 13:26:08",
   "geral": {
     "vendedor": "Geral",
     "total": 707,
@@ -20,16 +20,16 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
+      "Formulário Bio": 118,
       "Kommo": 491,
       "Indicação": 34,
-      "Formulário Bio": 118,
       "Formulário Meta": 20,
       "ROY-SDR": 38,
       "Não informado": 6
     },
     "porFaturamento": {
-      "Não informado": 335,
       "De R$50 mil a R$100 mil": 88,
+      "Não informado": 335,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 7,
@@ -70,8 +70,8 @@
   "vendedores": {
     "gleison": {
       "vendedor": "Gleison",
-      "total": 290,
-      "novoLead": 136,
+      "total": 291,
+      "novoLead": 137,
       "contatado": 19,
       "emConducao": 0,
       "agendado": 16,
@@ -87,14 +87,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
+        "Formulário Bio": 14,
         "Kommo": 261,
         "Indicação": 14,
-        "Formulário Bio": 13,
         "Formulário Meta": 2
       },
       "porFaturamento": {
+        "De R$50 mil a R$100 mil": 9,
         "Não informado": 210,
-        "De R$50 mil a R$100 mil": 8,
         "De R$15 mil a R$30 mil": 6,
         "De R$30 mil a R$50 mil": 29,
         "De R$20 mil a R$30 mil": 1,
@@ -112,7 +112,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 288,
+          "leads": 289,
           "vendas": 0,
           "faturamento": 0
         },
@@ -270,8 +270,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 8,
-      "novoLead": 8,
+      "total": 7,
+      "novoLead": 7,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -287,14 +287,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Bio": 2,
-        "Formulário Meta": 6
+        "Formulário Meta": 6,
+        "Formulário Bio": 1
       },
       "porFaturamento": {
-        "De R$50 mil a R$100 mil": 3,
         "De R$20 mil a R$30 mil": 1,
         "Acima de R$200 mil": 1,
         "erro": 2,
+        "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1
       },
       "porAnuncio": {
@@ -312,7 +312,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 8,
+          "leads": 7,
           "vendas": 0,
           "faturamento": 0
         }
@@ -445,10 +445,10 @@
   "debug": {
     "totalItens": 713,
     "porLista": {
-      "901326991205": 290,
+      "901326991205": 291,
       "901326992671": 18,
       "901326992672": 313,
-      "901326992677": 8,
+      "901326992677": 7,
       "901326992673": 37,
       "901326990978": 5,
       "901326992549": 1,
