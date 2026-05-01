@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-05-01T16:11:04.637Z",
-  "geradoEmBR": "01/05/2026, 13:11:04",
+  "geradoEm": "2026-05-01T16:16:10.991Z",
+  "geradoEmBR": "01/05/2026, 13:16:10",
   "geral": {
     "vendedor": "Geral",
-    "total": 706,
+    "total": 707,
     "novoLead": 233,
-    "contatado": 207,
+    "contatado": 208,
     "emConducao": 1,
     "agendado": 23,
     "followUp": 240,
     "venda": 0,
     "perdido": 2,
     "desqualificado": 0,
-    "contatadosTotal": 473,
+    "contatadosTotal": 474,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -22,14 +22,14 @@
     "porOrigem": {
       "Kommo": 491,
       "Indicação": 34,
-      "Formulário Bio": 117,
+      "Formulário Bio": 118,
       "Formulário Meta": 20,
       "ROY-SDR": 38,
       "Não informado": 6
     },
     "porFaturamento": {
       "Não informado": 335,
-      "De R$50 mil a R$100 mil": 87,
+      "De R$50 mil a R$100 mil": 88,
       "De R$15 mil a R$30 mil": 25,
       "De R$30 mil a R$50 mil": 128,
       "De R$20 mil a R$30 mil": 7,
@@ -56,7 +56,7 @@
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 704,
+        "leads": 705,
         "vendas": 0,
         "faturamento": 0
       },
@@ -270,8 +270,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 7,
-      "novoLead": 7,
+      "total": 8,
+      "novoLead": 8,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -287,14 +287,14 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 6,
-        "Formulário Bio": 1
+        "Formulário Bio": 2,
+        "Formulário Meta": 6
       },
       "porFaturamento": {
+        "De R$50 mil a R$100 mil": 3,
         "De R$20 mil a R$30 mil": 1,
         "Acima de R$200 mil": 1,
         "erro": 2,
-        "De R$50 mil a R$100 mil": 2,
         "De R$30 mil a R$50 mil": 1
       },
       "porAnuncio": {
@@ -312,7 +312,7 @@
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 7,
+          "leads": 8,
           "vendas": 0,
           "faturamento": 0
         }
@@ -321,15 +321,15 @@
     "roy": {
       "vendedor": "ROY SDR",
       "total": 41,
-      "novoLead": 6,
-      "contatado": 34,
+      "novoLead": 5,
+      "contatado": 35,
       "emConducao": 0,
       "agendado": 1,
       "followUp": 0,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 35,
+      "contatadosTotal": 36,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -443,12 +443,12 @@
     }
   ],
   "debug": {
-    "totalItens": 711,
+    "totalItens": 712,
     "porLista": {
       "901326991205": 290,
       "901326992671": 18,
       "901326992672": 313,
-      "901326992677": 7,
+      "901326992677": 8,
       "901326992673": 37,
       "901326990978": 4,
       "901326992549": 1,
