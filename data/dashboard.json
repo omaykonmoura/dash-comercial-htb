@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-05-01T20:16:12.887Z",
-  "geradoEmBR": "01/05/2026, 17:16:12",
+  "geradoEm": "2026-05-01T20:26:05.935Z",
+  "geradoEmBR": "01/05/2026, 17:26:05",
   "geral": {
     "vendedor": "Geral",
-    "total": 726,
-    "novoLead": 248,
+    "total": 727,
+    "novoLead": 249,
     "contatado": 207,
     "emConducao": 3,
     "agendado": 23,
@@ -24,11 +24,11 @@
       "Kommo": 496,
       "Indicação": 34,
       "Formulário Bio": 118,
-      "Formulário Meta": 33,
+      "Formulário Meta": 34,
       "Não informado": 6
     },
     "porFaturamento": {
-      "Não informado": 351,
+      "Não informado": 352,
       "Acima de R$100 mil": 2,
       "De R$50 mil a R$100 mil": 88,
       "De R$15 mil a R$30 mil": 25,
@@ -44,7 +44,7 @@
       "AD01.5 - PBE Carol — Cópia": 2,
       "AD05.3 - PBE 2026 não é para ...": 1,
       "AD01.3 - PBE 2026 não é para ...": 2,
-      "AD00.7 - Vídeo Antigo": 10,
+      "AD00.7 - Vídeo Antigo": 11,
       "AD02.5 - Criativo 2": 14,
       "AD00.7 - Vídeo Antigo — Cópia": 1,
       "AD00.8 - Vídeo como aumentar o faturamento": 1,
@@ -52,13 +52,13 @@
     },
     "porCampanha": {
       "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 6,
-      "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 13,
+      "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 14,
       "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 14
     },
     "porProduto": {},
     "porMes": {
       "Não informado": {
-        "leads": 724,
+        "leads": 725,
         "vendas": 0,
         "faturamento": 0
       },
@@ -271,8 +271,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 15,
-      "novoLead": 15,
+      "total": 16,
+      "novoLead": 16,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -288,16 +288,16 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 15
+        "Formulário Meta": 16
       },
       "porFaturamento": {
-        "Não informado": 11,
+        "Não informado": 12,
         "De R$30 mil a R$50 mil": 1,
         "erro": 2,
         "De R$50 mil a R$100 mil": 1
       },
       "porAnuncio": {
-        "AD00.7 - Vídeo Antigo": 10,
+        "AD00.7 - Vídeo Antigo": 11,
         "AD02.5 - Criativo 2": 1,
         "AD00.7 - Vídeo Antigo — Cópia": 1,
         "AD00.8 - Vídeo como aumentar o faturamento": 1,
@@ -305,14 +305,14 @@
         "AD01.3 - PBE 2026 não é para ...": 1
       },
       "porCampanha": {
-        "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 13,
+        "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 14,
         "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 1,
         "[WIN] [LEADS] [FORM NATIVO] [CBO][QUENTE] - Mentoria": 1
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 15,
+          "leads": 16,
           "vendas": 0,
           "faturamento": 0
         }
@@ -401,7 +401,7 @@
     },
     {
       "nome": "AD00.7 - Vídeo Antigo",
-      "leads": 10,
+      "leads": 11,
       "vendas": 0,
       "faturamento": 0,
       "txConv": 0
@@ -457,12 +457,12 @@
     }
   ],
   "debug": {
-    "totalItens": 735,
+    "totalItens": 736,
     "porLista": {
       "901326991205": 283,
       "901326992671": 36,
       "901326992672": 330,
-      "901326992677": 15,
+      "901326992677": 16,
       "901326992673": 48,
       "901326990978": 8,
       "901326992549": 1,
