@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-06T13:56:08.106Z",
-  "geradoEmBR": "06/05/2026, 10:56:08",
+  "geradoEm": "2026-05-06T14:01:11.841Z",
+  "geradoEmBR": "06/05/2026, 11:01:11",
   "geral": {
     "vendedor": "Geral",
     "total": 751,
@@ -244,8 +244,8 @@
     },
     "evento": {
       "vendedor": "Evento Presencial",
-      "total": 56,
-      "novoLead": 55,
+      "total": 57,
+      "novoLead": 56,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -261,7 +261,7 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 21,
+        "Formulário Meta": 22,
         "Formulário Bio": 14,
         "Kommo": 19,
         "ROY-SDR": 1,
@@ -269,7 +269,7 @@
       },
       "porFaturamento": {
         "Acima de R$100 mil": 4,
-        "De R$20 mil a R$30 mil": 7,
+        "De R$20 mil a R$30 mil": 8,
         "De R$50 mil a R$100 mil": 7,
         "De R$30 mil a R$50 mil": 2,
         "Acima de R$200 mil": 1,
@@ -278,17 +278,17 @@
         "Não informado": 23
       },
       "porAnuncio": {
-        "AD02.5 - Criativo 2": 18,
+        "AD02.5 - Criativo 2": 19,
         "AD02.3 - Vídeo 3 Gleisson": 1,
         "AD02.1 - Vídeo 1 maykon": 2
       },
       "porCampanha": {
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 21
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 22
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 56,
+          "leads": 57,
           "vendas": 0,
           "faturamento": 0
         }
@@ -296,8 +296,8 @@
     },
     "leadsPool": {
       "vendedor": "Pool de Leads",
-      "total": 17,
-      "novoLead": 17,
+      "total": 16,
+      "novoLead": 16,
       "contatado": 0,
       "emConducao": 0,
       "agendado": 0,
@@ -313,25 +313,25 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "Formulário Meta": 17
+        "Formulário Meta": 16
       },
       "porFaturamento": {
         "De R$30 mil a R$50 mil": 2,
-        "De R$20 mil a R$30 mil": 4,
+        "De R$20 mil a R$30 mil": 3,
         "Não informado": 11
       },
       "porAnuncio": {
-        "AD02.5 - Criativo 2": 6,
+        "AD02.5 - Criativo 2": 5,
         "AD00.7 - Vídeo Antigo": 10
       },
       "porCampanha": {
-        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 6,
+        "[WIN][LEADS][FORM NATIVO][CBO][FRIO] - EVENTO[JUNHO]": 5,
         "23 - [WIN] [LEADS] [FORM NATIVO] [CBO][FRIO] - Mentoria [FORM NOVO]": 10
       },
       "porProduto": {},
       "porMes": {
         "Não informado": {
-          "leads": 17,
+          "leads": 16,
           "vendas": 0,
           "faturamento": 0
         }
@@ -497,14 +497,14 @@
     }
   ],
   "debug": {
-    "totalItens": 755,
+    "totalItens": 756,
     "porLista": {
       "901326991205": 283,
       "901326992671": 43,
       "901326992672": 338,
-      "901326992677": 17,
-      "901326992673": 56,
-      "901326990978": 3,
+      "901326992677": 16,
+      "901326992673": 57,
+      "901326990978": 4,
       "901326992549": 1,
       "901327014968": 14
     }
