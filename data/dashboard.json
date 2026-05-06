@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-05-06T18:46:13.965Z",
-  "geradoEmBR": "06/05/2026, 15:46:13",
+  "geradoEm": "2026-05-06T18:51:12.583Z",
+  "geradoEmBR": "06/05/2026, 15:51:12",
   "geral": {
     "vendedor": "Geral",
     "total": 1,
-    "novoLead": 0,
+    "novoLead": 1,
     "contatado": 0,
-    "emConducao": 1,
+    "emConducao": 0,
     "agendado": 0,
     "followUp": 0,
     "venda": 0,
     "perdido": 0,
     "desqualificado": 0,
-    "contatadosTotal": 1,
+    "contatadosTotal": 0,
     "faturamento": 0,
     "ligacoes": 0,
     "followUps": 0,
@@ -20,7 +20,7 @@
     "reunioesRealizadas": 0,
     "noShow": 0,
     "porOrigem": {
-      "ROY-SDR": 1
+      "Não informado": 1
     },
     "porFaturamento": {
       "Não informado": 1
@@ -40,15 +40,15 @@
     "gleison": {
       "vendedor": "Gleison",
       "total": 1,
-      "novoLead": 0,
+      "novoLead": 1,
       "contatado": 0,
-      "emConducao": 1,
+      "emConducao": 0,
       "agendado": 0,
       "followUp": 0,
       "venda": 0,
       "perdido": 0,
       "desqualificado": 0,
-      "contatadosTotal": 1,
+      "contatadosTotal": 0,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -56,7 +56,7 @@
       "reunioesRealizadas": 0,
       "noShow": 0,
       "porOrigem": {
-        "ROY-SDR": 1
+        "Não informado": 1
       },
       "porFaturamento": {
         "Não informado": 1
