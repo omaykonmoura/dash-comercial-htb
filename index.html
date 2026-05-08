@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Comercial · High Ticket Beauty</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0f0f1a;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --accent:#6647f0;--gold:#ffc53d;--teal:#12a594;--red:#e5484d;--pink:#e93d82;--green:#30a46c;--orange:#f76808;
+  --text:#e8e8f0;--muted:#5a5a72;--dim:#3a3a52;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;top:-30%;left:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(102,71,240,0.07) 0%,transparent 65%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;bottom:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(18,165,148,0.05) 0%,transparent 65%);pointer-events:none;z-index:0;}
+
+header{position:sticky;top:0;z-index:200;background:rgba(8,8,16,0.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);height:62px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;background:linear-gradient(120deg,#fff 0%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav{display:flex;gap:2px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:30px;padding:3px;}
+.tab-btn{padding:5px 18px;border-radius:24px;border:none;background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
+.tab-btn.active{background:var(--accent);color:#fff;}
+.tab-btn.orange.active{background:var(--orange);}
+.tab-btn:hover:not(.active){color:var(--text);}
+.header-right{display:flex;align-items:center;gap:12px;}
+.live-badge{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 6px var(--teal);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+#countdown{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);background:rgba(255,197,61,0.08);padding:3px 10px;border-radius:20px;border:1px solid rgba(255,197,61,0.2);}
+
+.state-banner{display:none;text-align:center;padding:100px 20px;color:var(--muted);}
+.state-banner.visible{display:block;}
+.spinner{width:36px;height:36px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+main{position:relative;z-index:1;padding:28px 28px 80px;max-width:1640px;margin:0 auto;}
+.view{display:none;}
+.view.active{display:block;animation:fadeIn 0.3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+.month-filter{display:flex;align-items:center;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
+.month-filter label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-right:4px;}
+.month-btn{padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.month-btn:hover{border-color:var(--border2);color:var(--text);}
+.month-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+.sl{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--muted);margin:32px 0 14px;display:flex;align-items:center;gap:10px;}
+.sl::after{content:'';flex:1;height:1px;background:var(--border);}
+.sl:first-child{margin-top:0;}
+
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;margin-bottom:4px;}
+.kpi-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative;overflow:hidden;transition:transform 0.2s,border-color 0.2s;}
+.kpi-card:hover{transform:translateY(-2px);border-color:var(--border2);}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cc,var(--accent));}
+.kpi-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-weight:500;}
+.kpi-val{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;color:var(--text);}
+.kpi-val.sm{font-size:24px;}
+.kpi-sub{font-size:11px;color:var(--muted);margin-top:6px;}
+
+/* HOJE BADGE */
+.hoje-badge{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;background:rgba(247,104,8,0.15);color:var(--orange);border:1px solid rgba(247,104,8,0.3);margin-top:6px;}
+.hoje-dot{width:5px;height:5px;border-radius:50%;background:var(--orange);animation:blink 1.5s infinite;}
+
+/* VENDEDOR */
+.vendedor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;margin-bottom:4px;}
+.vc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;position:relative;overflow:hidden;}
+.vc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--vc);}
+.vc-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.vc-av{width:42px;height:42px;border-radius:50%;background:var(--vc);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;flex-shrink:0;}
+.vc-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--vc);}
+.vc-sub{font-size:11px;color:var(--muted);}
+.vc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.vs{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px;}
+.vs-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px;}
+.vs-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:600;}
+.vc-fat{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.vc-fat-val{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;}
+.vc-fat-lbl{font-size:11px;color:var(--muted);}
+.vc-hoje{font-size:11px;color:var(--orange);display:flex;align-items:center;gap:4px;}
+
+/* META */
+.meta-wrap{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:4px;}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+.mv{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.mv-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;margin-bottom:12px;}
+.mv-nums{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+.mv-atual{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:600;}
+.mv-total{font-size:12px;color:var(--muted);}
+.mv-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:6px;}
+.mv-fill{height:100%;border-radius:4px;transition:width 1s ease;}
+.mv-pct{font-size:11px;text-align:right;color:var(--muted);}
+
+/* RANKING */
+.ranking-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:4px;}
+.rc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.rc-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:18px;font-weight:500;}
+.rr{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);}
+.rr:last-child{border-bottom:none;}
+.rr-pos{font-family:'Bebas Neue',sans-serif;font-size:26px;width:30px;text-align:center;color:var(--muted);}
+.rr-pos.gold{color:var(--gold);}.rr-pos.silver{color:#9090a8;}.rr-pos.bronze{color:#bf9259;}
+.rr-info{flex:1;}
+.rr-name{font-weight:500;font-size:14px;margin-bottom:2px;}
+.rr-detail{font-size:11px;color:var(--muted);}
+.rr-scores{display:flex;gap:14px;}
+.rs{text-align:center;}
+.rs-val{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:600;}
+.rs-lbl{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;}
+
+/* CHARTS */
+.charts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;margin-bottom:4px;}
+.cc{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.cc-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:18px;font-weight:500;}
+
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.bar-lbl{font-size:11px;color:var(--text);width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bar-track{flex:1;height:6px;background:var(--bg);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;transition:width 0.9s cubic-bezier(0.34,1.56,0.64,1);}
+.bar-cnt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);width:28px;text-align:right;}
+
+/* ANUNCIO */
+.anuncio-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;margin-bottom:5px;background:var(--bg);border:1px solid var(--border);transition:border-color 0.2s;}
+.anuncio-row:hover{border-color:var(--border2);}
+.anuncio-name{flex:1;font-size:11px;font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ab{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;flex-shrink:0;background:rgba(102,71,240,0.15);color:var(--accent);border:1px solid rgba(102,71,240,0.3);}
+.ab.v{background:rgba(48,164,108,0.15);color:var(--green);border-color:rgba(48,164,108,0.3);}
+
+/* HOJE TABLE */
+.hoje-table{width:100%;border-collapse:collapse;font-size:12px;}
+.hoje-table th{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);text-align:left;padding:0 10px 12px;border-bottom:0.5px solid var(--border);font-weight:400;}
+.hoje-table td{color:var(--muted);padding:10px;border-bottom:0.5px solid var(--border);}
+.hoje-table td:first-child{color:var(--text);}
+.hoje-table tr:last-child td{border-bottom:none;}
+.hoje-table tr:hover td{background:rgba(247,104,8,0.03);}
+.status-pill{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:500;}
+
+/* EVENTO GRID */
+.evento-kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:4px;}
+.evento-status-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:4px;}
+.ev-status-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:16px;}
+.ev-status-title{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;}
+.ev-status-count{font-family:'Bebas Neue',sans-serif;font-size:36px;margin-bottom:8px;}
+.ev-lead-list{font-size:11px;color:var(--muted);line-height:1.8;}
+
+.empty{text-align:center;padding:28px;color:var(--muted);font-size:12px;}
+footer{text-align:center;padding:36px 28px;color:var(--dim);font-size:11px;border-top:1px solid var(--border);margin-top:48px;}
+@media(max-width:900px){main{padding:14px;}header{padding:0 14px;}.kpi-grid{grid-template-columns:repeat(2,1fr);}.ranking-grid{grid-template-columns:1fr;}.vc-stats{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">HTB · COMERCIAL</div>
+  <div class="nav">
+    <button class="tab-btn active" onclick="switchView('geral',this)">Visão Geral</button>
+    <button class="tab-btn orange" onclick="switchView('evento',this)">Evento Presencial</button>
+    <button class="tab-btn" onclick="switchView('hoje',this)">Leads de Hoje</button>
+  </div>
+  <div class="header-right">
+    <div class="live-badge"><div class="dot"></div><span id="last-update">–</span></div>
+    <div id="countdown">próx. em 5:00</div>
+  </div>
+</header>
+
+<div class="state-banner" id="loading-state">
+  <div class="spinner"></div>Carregando dados...
+</div>
+
+<main id="dashboard" style="display:none">
+
+  <!-- ════ VISÃO GERAL ════ -->
+  <div class="view active" id="view-geral">
+    <div class="month-filter">
+      <label>Mês:</label>
+      <button class="month-btn active" onclick="setMonth('todos',this)">Todos</button>
+      <button class="month-btn" onclick="setMonth('Janeiro',this)">Jan</button>
+      <button class="month-btn" onclick="setMonth('Fevereiro',this)">Fev</button>
+      <button class="month-btn" onclick="setMonth('Março',this)">Mar</button>
+      <button class="month-btn" onclick="setMonth('Abril',this)">Abr</button>
+      <button class="month-btn" onclick="setMonth('Maio',this)">Mai</button>
+      <button class="month-btn" onclick="setMonth('Junho',this)">Jun</button>
+      <button class="month-btn" onclick="setMonth('Julho',this)">Jul</button>
+      <button class="month-btn" onclick="setMonth('Agosto ',this)">Ago</button>
+      <button class="month-btn" onclick="setMonth('Setembro ',this)">Set</button>
+      <button class="month-btn" onclick="setMonth('Outubro ',this)">Out</button>
+      <button class="month-btn" onclick="setMonth('Novembro',this)">Nov</button>
+      <button class="month-btn" onclick="setMonth('Dezembro',this)">Dez</button>
+    </div>
+    <div class="sl">Visão Geral</div>
+    <div class="kpi-grid" id="kpi-geral"></div>
+    <div class="sl">Performance por Vendedor</div>
+    <div class="vendedor-grid" id="vc-grid"></div>
+    <div class="sl">Meta do Mês vs Faturamento</div>
+    <div class="meta-wrap"><div class="meta-grid" id="meta-grid"></div></div>
+    <div class="sl">Ranking de Vendedores</div>
+    <div class="ranking-grid">
+      <div class="rc" id="rank-calls"></div>
+      <div class="rc" id="rank-fat"></div>
+    </div>
+    <div class="sl">Origem & Faixa de Faturamento</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📥 Leads por Origem</div><div id="ch-origem"></div></div>
+      <div class="cc"><div class="cc-title">🎯 Faturamento · Mais Leads</div><div id="ch-fat-leads"></div></div>
+      <div class="cc"><div class="cc-title">💰 Faturamento · Mais Vendas</div><div id="ch-fat-vendas"></div></div>
+    </div>
+    <div class="sl">Anúncios Meta Ads</div>
+    <div class="charts-grid">
+      <div class="cc"><div class="cc-title">📢 Anúncio · Mais Leads</div><div id="ad-leads"></div></div>
+      <div class="cc"><div class="cc-title">🏆 Anúncio · Mais Vendas</div><div id="ad-vendas"></div></div>
+      <div class="cc"><div class="cc-title">📋 Produto Mais Vendido</div><div id="ch-produto"></div></div>
+    </div>
+  </div>
+
+  <!-- ════ EVENTO PRESENCIAL ════ -->
+  <div class="view" id="view-evento">
+    <div class="sl">Evento Presencial · KPIs</div>
+    <div class="evento-kpi-grid" id="evento-kpis"></div>
+    <div class="sl">Distribuição por Status</div>
+    <div class="evento-status-grid" id="evento-status"></div>
+    <div class="sl">Leads criados hoje no Evento</div>
+    <div class="cc" style="margin-bottom:12px"><div class="cc-title">📅 Entradas de hoje</div><div id="evento-hoje"></div></div>
+  </div>
+
+  <!-- ════ LEADS DE HOJE ════ -->
+  <div class="view" id="view-hoje">
+    <div class="sl">Leads criados hoje · Todas as listas</div>
+    <div class="cc">
+      <div class="cc-title" id="hoje-title">📅 Leads de hoje</div>
+      <div id="hoje-content"></div>
+    </div>
+  </div>
+
+</main>
+<footer>Dashboard Comercial · High Ticket Beauty · N8N → GitHub Pages · Atualização a cada 5 min</footer>
+
+<script>
+const VENDEDORES=[
+  {key:'gleison',name:'Gleison',color:'#6647f0',initial:'G'},
+  {key:'lais',   name:'Laís',  color:'#e93d82',initial:'L'},
+  {key:'diogo',  name:'Diogo', color:'#12a594',initial:'D'},
+];
+const METAS={gleison:50000,lais:50000,diogo:50000};
+const STATUS_COLORS={
+  'venda realizada':'#30a46c','venda feita':'#30a46c',
+  'reunião agendada':'#ffc53d',
+  'proposta enviada':'#6647f0','em condução':'#6647f0','negociação':'#6647f0',
+  'ativação de texto':'#e93d82','ativação':'#e93d82','contato realizado':'#e93d82',
+  'follow-up':'#f76808','contato futuro':'#f76808',
+  'novo lead':'#5a5a72','lead perdido':'#e5484d',
+};
+
+let DATA=null, currentMonth='todos', timerSecs=300, timerRef=null;
+const fmtBRL=n=>(n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const topN=(obj,n=8)=>Object.entries(obj||{}).sort((a,b)=>b[1]-a[1]).slice(0,n);
+const safe=v=>v||0;
+
+function switchView(id,btn){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('view-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function setMonth(m,btn){
+  currentMonth=m;
+  document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(DATA) renderGeral();
+}
+
+function renderBars(id,entries,color){
+  const el=document.getElementById(id);
+  if(!entries.length){el.innerHTML='<div class="empty">Sem dados</div>';return;}
+  const max=entries[0][1];
+  el.innerHTML=entries.map(([lbl,cnt])=>`
+    <div class="bar-row">
+      <div class="bar-lbl" title="${lbl}">${lbl}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(cnt/max)*100}%;background:${color}"></div></div>
+      <div class="bar-cnt">${cnt}</div>
+    </div>`).join('');
+}
+function renderAnuncio(id,entries,isV){
+  const el=document.getElementById(id);
+  if(!entries.length){el.innerHTML='<div class="empty">Sem dados de anúncio</div>';return;}
+  el.innerHTML=entries.map(([name,cnt])=>`
+    <div class="anuncio-row">
+      <div class="anuncio-name">${name||'—'}</div>
+      <div class="ab ${isV?'v':''}">${cnt} ${isV?'venda':'lead'}${cnt!==1?'s':''}</div>
+    </div>`).join('');
+}
+function renderRanking(id,title,rows){
+  const medals=['gold','silver','bronze'],icons=['🥇','🥈','🥉'];
+  document.getElementById(id).innerHTML=`
+    <div class="rc-title">${title}</div>
+    ${rows.map((r,i)=>`
+      <div class="rr">
+        <div class="rr-pos ${medals[i]||''}">${icons[i]||i+1}</div>
+        <div class="rr-info"><div class="rr-name" style="color:${r.color}">${r.name}</div><div class="rr-detail">${r.detail}</div></div>
+        <div class="rr-scores">${r.scores.map(s=>`<div class="rs"><div class="rs-val" style="color:${s.color}">${s.val}</div><div class="rs-lbl">${s.lbl}</div></div>`).join('')}</div>
+      </div>`).join('')}`;
+}
+function statusPill(s){
+  const c=STATUS_COLORS[s]||'#5a5a72';
+  return `<span class="status-pill" style="background:${c}22;color:${c};border:1px solid ${c}44">${s}</span>`;
+}
+
+function renderGeral(){
+  const g=DATA.geral, vs=DATA.vendedores;
+  const hoje=safe(g.leadsCriadosHoje);
+
+  document.getElementById('kpi-geral').innerHTML=[
+    {lbl:'Total de Leads',    val:safe(g.total),              sub:`${safe(g.novoLead)} novos leads`,color:'var(--accent)',hoje:hoje},
+    {lbl:'Contatos Feitos',   val:safe(g.contatadosTotal),    sub:`${g.total?Math.round((safe(g.contatadosTotal)/g.total)*100):0}% dos leads`,color:'var(--pink)'},
+    {lbl:'Ligações Feitas',   val:safe(g.ligacoes),           sub:'Data de ligação registrada',color:'var(--gold)'},
+    {lbl:'Calls Agendadas',   val:safe(g.reunioesAgendadas),  sub:'Agenda MD preenchida',color:'var(--gold)'},
+    {lbl:'Calls Realizadas',  val:safe(g.reunioesRealizadas), sub:'Reuniões realizadas',color:'var(--teal)'},
+    {lbl:'No-Show',           val:safe(g.noShow),             sub:'Não compareceram',color:'var(--red)'},
+    {lbl:'Vendas',            val:safe(g.venda),              sub:`${g.total?((safe(g.venda)/g.total)*100).toFixed(1):0}% conversão`,color:'var(--green)'},
+    {lbl:'Faturamento',       val:fmtBRL(safe(g.faturamento)),sub:'Total de vendas',color:'var(--green)',sm:true},
+  ].map(k=>`
+    <div class="kpi-card" style="--cc:${k.color}">
+      <div class="kpi-lbl">${k.lbl}</div>
+      <div class="kpi-val ${k.sm?'sm':''}">${k.val}</div>
+      <div class="kpi-sub">${k.sub}</div>
+      ${k.hoje!=null?`<div class="hoje-badge"><div class="hoje-dot"></div>${k.hoje} hoje</div>`:''}
+    </div>`).join('');
+
+  document.getElementById('vc-grid').innerHTML=VENDEDORES.map(v=>{
+    const vd=vs[v.key]||{};
+    const vn=safe(vd.total),vv=safe(vd.venda),vf=safe(vd.faturamento),vh=safe(vd.leadsCriadosHoje);
+    return `
+    <div class="vc" style="--vc:${v.color}">
+      <div class="vc-head">
+        <div class="vc-av">${v.initial}</div>
+        <div><div class="vc-name">${v.name}</div><div class="vc-sub">${vn} leads · ${vn?((vv/vn)*100).toFixed(1):0}% conversão</div></div>
+      </div>
+      <div class="vc-stats">
+        <div class="vs"><div class="vs-lbl">Contatos</div><div class="vs-val" style="color:${v.color}">${safe(vd.contatadosTotal)}</div></div>
+        <div class="vs"><div class="vs-lbl">Ligações</div><div class="vs-val" style="color:var(--gold)">${safe(vd.ligacoes)}</div></div>
+        <div class="vs"><div class="vs-lbl">Agendadas</div><div class="vs-val" style="color:var(--gold)">${safe(vd.reunioesAgendadas)}</div></div>
+        <div class="vs"><div class="vs-lbl">Realizadas</div><div class="vs-val" style="color:var(--teal)">${safe(vd.reunioesRealizadas)}</div></div>
+        <div class="vs"><div class="vs-lbl">No-Show</div><div class="vs-val" style="color:var(--red)">${safe(vd.noShow)}</div></div>
+        <div class="vs"><div class="vs-lbl">Vendas</div><div class="vs-val" style="color:var(--green)">${vv}</div></div>
+      </div>
+      <div class="vc-fat">
+        <div><div class="vc-fat-val" style="color:${v.color}">${fmtBRL(vf)}</div><div class="vc-fat-lbl">faturado</div></div>
+        ${vh>0?`<div class="vc-hoje">🔥 ${vh} hoje</div>`:''}
+      </div>
+    </div>`; }).join('');
+
+  document.getElementById('meta-grid').innerHTML=VENDEDORES.map(v=>{
+    const vf=safe((vs[v.key]||{}).faturamento),meta=METAS[v.key]||50000;
+    const pct=Math.min((vf/meta)*100,100);
+    const cor=pct>=100?'var(--green)':pct>=70?'var(--gold)':'var(--red)';
+    return `
+    <div class="mv">
+      <div class="mv-name" style="color:${v.color}">${v.name}</div>
+      <div class="mv-nums"><div class="mv-atual">${fmtBRL(vf)}</div><div class="mv-total">meta: ${fmtBRL(meta)}</div></div>
+      <div class="mv-bar"><div class="mv-fill" style="width:${pct}%;background:${cor}"></div></div>
+      <div class="mv-pct" style="color:${cor}">${pct.toFixed(1)}% da meta</div>
+    </div>`; }).join('');
+
+  const callsRows=VENDEDORES.map(v=>{
+    const vd=vs[v.key]||{};
+    return{name:v.name,color:v.color,detail:'agendadas · realizadas · no-show',
+      agend:safe(vd.reunioesAgendadas),realiz:safe(vd.reunioesRealizadas),noshow:safe(vd.noShow)};
+  }).sort((a,b)=>b.agend-a.agend).map(d=>({...d,scores:[
+    {val:d.agend, lbl:'Agend.', color:'var(--gold)'},
+    {val:d.realiz,lbl:'Realiz.',color:'var(--teal)'},
+    {val:d.noshow,lbl:'No-show',color:'var(--red)'},
+  ]}));
+  renderRanking('rank-calls','🏆 Ranking · Calls',callsRows);
+
+  const fatRows=VENDEDORES.map(v=>{
+    const vd=vs[v.key]||{};
+    return{name:v.name,color:v.color,fat:safe(vd.faturamento),vendas:safe(vd.venda),detail:`${safe(vd.venda)} vendas`};
+  }).sort((a,b)=>b.fat-a.fat).map(d=>({...d,scores:[{val:fmtBRL(d.fat),lbl:'Faturado',color:'var(--green)'}]}));
+  renderRanking('rank-fat','💰 Ranking · Faturamento',fatRows);
+
+  renderBars('ch-origem',   topN(g.porOrigem),     '#6647f0');
+  renderBars('ch-fat-leads',topN(g.porFaturamento),'#ffc53d');
+  renderBars('ch-fat-vendas',topN(g.porFaturamento),'#30a46c');
+  renderBars('ch-produto',  topN(g.porProduto||{}),'#12a594');
+  const ads=DATA.anuncios||[];
+  renderAnuncio('ad-leads', ads.slice(0,8).map(a=>[a.nome,a.leads]));
+  renderAnuncio('ad-vendas',ads.filter(a=>a.vendas>0).sort((a,b)=>b.vendas-a.vendas).slice(0,8).map(a=>[a.nome,a.vendas]),true);
+}
+
+function renderEvento(){
+  const ev=DATA.eventoPresencial||{};
+  const total=ev.total||0, ing=ev.ingressosVendidos||0, hoje=ev.leadsCriadosHoje||0;
+  const conv=total>0?((ing/total)*100).toFixed(1):0;
+
+  document.getElementById('evento-kpis').innerHTML=[
+    {lbl:'Total de Leads',     val:total,       sub:'na lista Evento Presencial', color:'var(--orange)'},
+    {lbl:'Ingressos Vendidos', val:ing,          sub:`${conv}% de conversão`,      color:'var(--green)'},
+    {lbl:'Leads Hoje',         val:hoje,         sub:'criados hoje nesta lista',   color:'var(--gold)'},
+    {lbl:'Em Negociação',      val:safe((ev.porStatus||{})['negociação']?.count),  sub:'aguardando fechamento', color:'var(--accent)'},
+  ].map(k=>`
+    <div class="kpi-card" style="--cc:${k.color}">
+      <div class="kpi-lbl">${k.lbl}</div>
+      <div class="kpi-val">${k.val}</div>
+      <div class="kpi-sub">${k.sub}</div>
+    </div>`).join('');
+
+  const STATUS_ORDER=['venda feita','negociação','follow-up','ativação','contato realizado','novo lead','lead perdido'];
+  const porStatus=ev.porStatus||{};
+  const statusEntries=[...STATUS_ORDER.filter(s=>porStatus[s]),...Object.keys(porStatus).filter(s=>!STATUS_ORDER.includes(s)&&porStatus[s])];
+
+  document.getElementById('evento-status').innerHTML=statusEntries.map(s=>{
+    const info=porStatus[s]||{};
+    const c=STATUS_COLORS[s]||'#5a5a72';
+    const leads=(info.leads||[]).slice(0,5);
+    return `
+    <div class="ev-status-card" style="border-color:${c}33">
+      <div class="ev-status-title" style="color:${c}">${s}</div>
+      <div class="ev-status-count" style="color:${c}">${info.count||0}</div>
+      <div class="ev-lead-list">${leads.map(l=>`· ${l}`).join('<br>')}${(info.leads||[]).length>5?`<br><span style="color:var(--dim)">+${(info.leads||[]).length-5} mais</span>`:''}</div>
+    </div>`;
+  }).join('');
+
+  const hojeList=ev.hojeComStatus||[];
+  document.getElementById('evento-hoje').innerHTML=hojeList.length
+    ?`<table class="hoje-table">
+        <thead><tr><th>Lead</th><th>Status</th></tr></thead>
+        <tbody>${hojeList.map(l=>`<tr><td>${l.nome}</td><td>${statusPill(l.status)}</td></tr>`).join('')}</tbody>
+      </table>`
+    :'<div class="empty">Nenhum lead criado hoje nessa lista</div>';
+}
+
+function renderHoje(){
+  const leads=DATA.leadsCriadosHoje||[];
+  document.getElementById('hoje-title').textContent=`📅 Leads de hoje — ${leads.length} total`;
+  document.getElementById('hoje-content').innerHTML=leads.length
+    ?`<table class="hoje-table">
+        <thead><tr><th>Lead</th><th>Status</th><th>Lista</th><th>Criado às</th></tr></thead>
+        <tbody>${leads.map(l=>`
+          <tr>
+            <td>${l.nome}</td>
+            <td>${statusPill(l.status)}</td>
+            <td style="color:var(--muted);font-size:11px">${l.lista}</td>
+            <td style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim)">${l.criadoEm}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>`
+    :'<div class="empty">Nenhum lead criado hoje ainda</div>';
+}
+
+async function loadData(){
+  try{
+    document.getElementById('loading-state').classList.add('visible');
+    document.getElementById('dashboard').style.display='none';
+    const res=await fetch('./data/dashboard.json?t='+Date.now());
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    DATA=await res.json();
+    document.getElementById('last-update').textContent=DATA.geradoEmBR?DATA.geradoEmBR.split(',')[1]?.trim():new Date().toLocaleTimeString('pt-BR');
+    renderGeral();
+    renderEvento();
+    renderHoje();
+    document.getElementById('loading-state').classList.remove('visible');
+    document.getElementById('dashboard').style.display='block';
+  }catch(err){
+    document.getElementById('loading-state').innerHTML=
+      `<p style="color:#e5484d;font-size:16px;">❌ Erro ao carregar dados</p>
+       <p style="font-size:12px;color:#5a5a72;margin-top:8px;">${err.message}</p>`;
+    document.getElementById('loading-state').classList.add('visible');
+  }
+}
+
+function startTimer(){
+  if(timerRef) clearInterval(timerRef);
+  timerSecs=300;
+  timerRef=setInterval(()=>{
+    timerSecs--;
+    const m=Math.floor(timerSecs/60),s=timerSecs%60;
+    document.getElementById('countdown').textContent=`próx. em ${m}:${String(s).padStart(2,'0')}`;
+    if(timerSecs<=0){timerSecs=300;loadData();}
+  },1000);
+}
+
+loadData();
+startTimer();
+</script>
+</body>
+</html>
