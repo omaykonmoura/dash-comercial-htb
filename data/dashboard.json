@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-05-08T21:25:52.797Z",
-  "geradoEmBR": "08/05/2026, 18:25:52",
+  "geradoEm": "2026-05-08T21:31:11.378Z",
+  "geradoEmBR": "08/05/2026, 18:31:11",
   "geral": {
     "vendedor": "Geral",
     "total": 867,
-    "novoLead": 83,
-    "contatado": 315,
+    "novoLead": 82,
+    "contatado": 316,
     "emConducao": 187,
     "agendado": 23,
     "followUp": 229,
     "venda": 19,
     "perdido": 11,
     "desqualificado": 0,
-    "contatadosTotal": 784,
+    "contatadosTotal": 785,
     "faturamento": 5000,
     "ligacoes": 0,
     "followUps": 0,
@@ -186,15 +186,15 @@
     "diogo": {
       "vendedor": "Diogo",
       "total": 274,
-      "novoLead": 21,
-      "contatado": 225,
+      "novoLead": 20,
+      "contatado": 226,
       "emConducao": 20,
       "agendado": 5,
       "followUp": 0,
       "venda": 0,
       "perdido": 3,
       "desqualificado": 0,
-      "contatadosTotal": 253,
+      "contatadosTotal": 254,
       "faturamento": 0,
       "ligacoes": 0,
       "followUps": 0,
@@ -525,28 +525,28 @@
     },
     {
       "nome": "Mari Rocha",
-      "status": "contato realizado",
+      "status": "ativação de texto",
       "lista": "Laís",
       "listId": "901326992671",
       "criadoEm": "08/05/2026, 08:46:39"
     },
     {
       "nome": "Vanda Regina",
-      "status": "contato realizado",
+      "status": "ativação de texto",
       "lista": "Laís",
       "listId": "901326992671",
       "criadoEm": "08/05/2026, 08:26:25"
     },
     {
       "nome": "CABELEIREIRO  | Emerson Alves",
-      "status": "contato realizado",
+      "status": "ativação de texto",
       "lista": "Laís",
       "listId": "901326992671",
       "criadoEm": "08/05/2026, 08:02:07"
     },
     {
       "nome": "Renato Oliveira",
-      "status": "contato realizado",
+      "status": "ativação de texto",
       "lista": "Laís",
       "listId": "901326992671",
       "criadoEm": "08/05/2026, 07:15:09"
@@ -768,14 +768,14 @@
     }
   ],
   "debug": {
-    "totalItens": 950,
+    "totalItens": 954,
     "porLista": {
       "901326991205": 214,
       "901326992671": 91,
       "901326992672": 274,
       "901326992677": 1,
       "901326992673": 74,
-      "901327062868": 82,
+      "901327062868": 86,
       "901326992549": 1,
       "901327019006": 213
     },
