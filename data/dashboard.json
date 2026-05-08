@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-08T21:31:11.378Z",
-  "geradoEmBR": "08/05/2026, 18:31:11",
+  "geradoEm": "2026-05-08T21:36:03.018Z",
+  "geradoEmBR": "08/05/2026, 18:36:03",
   "geral": {
     "vendedor": "Geral",
     "total": 867,
@@ -518,7 +518,7 @@
   "leadsCriadosHoje": [
     {
       "nome": "JOSANE SAMPAIO | ESPAÇO DE BELEZA",
-      "status": "contato realizado",
+      "status": "ativação de texto",
       "lista": "Laís",
       "listId": "901326992671",
       "criadoEm": "08/05/2026, 09:36:40"
@@ -768,14 +768,14 @@
     }
   ],
   "debug": {
-    "totalItens": 954,
+    "totalItens": 955,
     "porLista": {
       "901326991205": 214,
       "901326992671": 91,
       "901326992672": 274,
       "901326992677": 1,
       "901326992673": 74,
-      "901327062868": 86,
+      "901327062868": 87,
       "901326992549": 1,
       "901327019006": 213
     },
