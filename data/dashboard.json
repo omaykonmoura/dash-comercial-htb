@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-05-08T20:21:19.814Z",
-  "geradoEmBR": "08/05/2026, 17:21:19",
+  "geradoEm": "2026-05-08T20:22:02.359Z",
+  "geradoEmBR": "08/05/2026, 17:22:02",
   "geral": {
     "vendedor": "Geral",
     "total": 1,
@@ -19,6 +19,7 @@
     "reunioesAgendadas": 0,
     "reunioesRealizadas": 0,
     "noShow": 0,
+    "leadsCriadosHoje": 0,
     "porOrigem": {
       "ROY-SDR": 1
     },
@@ -55,6 +56,7 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {
         "ROY-SDR": 1
       },
@@ -90,6 +92,7 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {},
       "porFaturamento": {},
       "porAnuncio": {},
@@ -115,6 +118,7 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {},
       "porFaturamento": {},
       "porAnuncio": {},
@@ -140,6 +144,7 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {},
       "porFaturamento": {},
       "porAnuncio": {},
@@ -165,6 +170,7 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {},
       "porFaturamento": {},
       "porAnuncio": {},
@@ -190,6 +196,33 @@
       "reunioesAgendadas": 0,
       "reunioesRealizadas": 0,
       "noShow": 0,
+      "leadsCriadosHoje": 0,
+      "porOrigem": {},
+      "porFaturamento": {},
+      "porAnuncio": {},
+      "porCampanha": {},
+      "porProduto": {},
+      "porMes": {}
+    },
+    "fup15": {
+      "vendedor": "Leads +15 FUP",
+      "total": 0,
+      "novoLead": 0,
+      "contatado": 0,
+      "emConducao": 0,
+      "agendado": 0,
+      "followUp": 0,
+      "venda": 0,
+      "perdido": 0,
+      "desqualificado": 0,
+      "contatadosTotal": 0,
+      "faturamento": 0,
+      "ligacoes": 0,
+      "followUps": 0,
+      "reunioesAgendadas": 0,
+      "reunioesRealizadas": 0,
+      "noShow": 0,
+      "leadsCriadosHoje": 0,
       "porOrigem": {},
       "porFaturamento": {},
       "porAnuncio": {},
@@ -198,6 +231,14 @@
       "porMes": {}
     }
   },
+  "eventoPresencial": {
+    "total": 0,
+    "ingressosVendidos": 0,
+    "leadsCriadosHoje": 0,
+    "hojeComStatus": [],
+    "porStatus": {}
+  },
+  "leadsCriadosHoje": [],
   "ranking": [
     {
       "vendedor": "Gleison",
@@ -208,6 +249,7 @@
       "noShow": 0,
       "venda": 0,
       "faturamento": 0,
+      "leadsCriadosHoje": 0,
       "posicao": 1
     },
     {
@@ -219,6 +261,7 @@
       "noShow": 0,
       "venda": 0,
       "faturamento": 0,
+      "leadsCriadosHoje": 0,
       "posicao": 2
     },
     {
@@ -230,6 +273,7 @@
       "noShow": 0,
       "venda": 0,
       "faturamento": 0,
+      "leadsCriadosHoje": 0,
       "posicao": 3
     }
   ],
@@ -238,6 +282,9 @@
     "totalItens": 1,
     "porLista": {
       "901326991205": 1
-    }
+    },
+    "statusEncontrados": [
+      "em condução"
+    ]
   }
 }
